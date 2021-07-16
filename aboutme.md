@@ -1,16 +1,36 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About Me
+subtitle: 
 ---
 
-My name is Inigo Montoya. I have the following qualities:
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+# Chi Sono ?
 
-What else do you need?
+Sono un ragazzo di 22 anni
 
-### My story
+<img src="/assets/img/picture.jpg" alt="profile" width="250"/>
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+
+# Studi <i class="fa fa-graduation-cap" aria-hidden="true"></i> 
+
+* BSc in physical engineering, 2020
+    Politecnico di Torino
+    
+* Msc in Physics of Complex Systems at Universitá di Torino (work in progress)
+
+# Interessi
+* Fisica
+* Coding 
+* Cucina
+
+
+
+
+
+
+
+## Coming Soon
+
+<p>Per ora vi lascio il mio <a href="/assets/file/cv.pdf">CV</a></p>
+
