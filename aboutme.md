@@ -7,12 +7,12 @@ subtitle:
 
 
 My name is Pietro Sillano. I'm graduated in Physics Engineering at the Politecnico of Turin (Italy) and now I'm at first year in Physics of Complex Systems at the University of Turin.
-My main interest is about BioPhysics and how we can represent many biological phenomena using physics tools and frameworks in particular Statistical Mechanics.
+My main interest is about **BioPhysics** and how we can represent many biological phenomena using physics tools and frameworks in particular Statistical Mechanics.
 
-Moreover thanks to some lectures, I got really interested in Machine & Deep Learning and I joined the Machine Learning Journal Club (MLJC), a student organization from Turin which aims to fill the gap between students and researchers in Machine & Deep Learning related fields.
+Moreover thanks to some lectures, I got really interested in **Machine & Deep Learning** and I joined the Machine Learning Journal Club (MLJC), a student organization from Turin which aims to fill the gap between students and researchers in Machine & Deep Learning related fields.
 
 
-Currently I'm doing an Internship in Nicolaus Copernicus University(NCU) about applied machine learning and network teory.
+Currently I'm doing an Internship at NCU in Torun (Poland) about applied machine learning and network teory.
 
 
 <h2>Contact me </h2>
