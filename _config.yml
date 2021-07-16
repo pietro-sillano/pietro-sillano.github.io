@@ -8,11 +8,10 @@ author: Pietro Sillano
 # --- List of links in the navigation bar --- #
 
 navbar-links:
-  About Me: "aboutme"
   Resources:
+
+  About Me: "aboutme"
     #D- Beautiful Jekyll: "https:// "
-  Consigli: "consigli"
-  Contact Me: "contact"
 
 # --- Logo --- #
 
