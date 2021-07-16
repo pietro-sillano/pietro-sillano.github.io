@@ -1,16 +1,12 @@
-
 # Name of website
 title: Sullivan Stuff
-
 # Your name to show in the footer
 author: Pietro Sillano
-
 # --- List of links in the navigation bar --- #
-
 navbar-links:
   Resources:
-
   About Me: "aboutme"
+  
     #D- Beautiful Jekyll: "https:// "
 
 # --- Logo --- #
