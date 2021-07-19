@@ -6,6 +6,8 @@ gh-repo: pietro-sillano/Stroke_Rehab_EEG
 gh-badge: [follow]
 tags: [EEG]
 comments: true
+cover-img: ../assets/img/eeg.jpeg
+readtime: true
 ---
 
 
