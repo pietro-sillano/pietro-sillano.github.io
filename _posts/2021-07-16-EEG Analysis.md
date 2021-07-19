@@ -7,6 +7,7 @@ gh-badge: [star, fork, follow]
 tags: [test]
 comments: true
 cover-img: ../assets/img/eeg.jpeg
+readtime: true
 ---
 
 
