@@ -1,0 +1,613 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>EEG Analysis | SullivanStuff</title>
+<meta name="description" content="This project has been developed during the 2021 hackathon organized by G-Tec. In these two days, we analyzed a motor imagery Brain Computer Interfaces (BCIs) dataset from chronic stroke patients. In recent years, BCIs have been widely used as rehabilitation tools to help the recovery process.. Thanks to BCIs, we can detect brain signals, and use them to  recognize the willingness of the subject to move a part of their body, like . In fact, before performing a movement, we rehearse it in our minds and we activate a specific brain area .This process is called motor imagery (MI), and the resulting brain signal can be recorded and interpreted to  enhance  a therapy.">
+
+
+  <meta name="author" content="Pietro Sillano">
+  
+  <meta property="article:author" content="Pietro Sillano">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="SullivanStuff">
+<meta property="og:title" content="EEG Analysis">
+<meta property="og:url" content="http://localhost:4000/projects/2021-07-16-EEG_Analysis/">
+
+
+  <meta property="og:description" content="This project has been developed during the 2021 hackathon organized by G-Tec. In these two days, we analyzed a motor imagery Brain Computer Interfaces (BCIs) dataset from chronic stroke patients. In recent years, BCIs have been widely used as rehabilitation tools to help the recovery process.. Thanks to BCIs, we can detect brain signals, and use them to  recognize the willingness of the subject to move a part of their body, like . In fact, before performing a movement, we rehearse it in our minds and we activate a specific brain area .This process is called motor imagery (MI), and the resulting brain signal can be recorded and interpreted to  enhance  a therapy.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2021-07-16T00:00:00+02:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/projects/2021-07-16-EEG_Analysis/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Pietro Sillano",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SullivanStuff Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SullivanStuff
+          <span class="site-subtitle"></span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/">Home</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/contact/">Contact</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/projects" itemprop="item"><span itemprop="name">Projects</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">EEG Analysis</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/img/propic.jpeg" alt="Pietro Sillano" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Pietro Sillano</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Physics Student, ML &amp; AI passionate</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Turin, Italy</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:pietrosillano@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+            <li><a href="https://pietro-sillano.github.io/" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/pietro-sillano" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:pietrosillano@gmail.com" rel="me" class="u-email">
+            <meta itemprop="email" content="pietrosillano@gmail.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="EEG Analysis">
+    <meta itemprop="description" content="This project has been developed during the 2021 hackathon organized by G-Tec. In these two days, we analyzed a motor imagery Brain Computer Interfaces (BCIs) dataset from chronic stroke patients. In recent years, BCIs have been widely used as rehabilitation tools to help the recovery process.. Thanks to BCIs, we can detect brain signals, and use them to  recognize the willingness of the subject to move a part of their body, like . In fact, before performing a movement, we rehearse it in our minds and we activate a specific brain area .This process is called motor imagery (MI), and the resulting brain signal can be recorded and interpreted to  enhance  a therapy.">
+    <meta itemprop="datePublished" content="2021-07-16T00:00:00+02:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/projects/2021-07-16-EEG_Analysis/" class="u-url" itemprop="url">EEG Analysis
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          9 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#data-description">Data description</a></li><li><a href="#methods">Methods</a><ul><li><a href="#preprocessing">Preprocessing</a></li><li><a href="#feature-extraction">Feature extraction</a></li><li><a href="#classification">Classification</a></li></ul></li><li><a href="#discussion">Discussion</a></li><li><a href="#conclusions">Conclusions</a></li><li><a href="#credits">Credits</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <p>This project has been developed during the 2021 hackathon organized by G-Tec. In these two days, we analyzed a motor imagery Brain Computer Interfaces (BCIs) dataset from chronic stroke patients. In recent years, BCIs have been widely used as rehabilitation tools to help the recovery process.. Thanks to BCIs, we can detect brain signals, and use them to  recognize the willingness of the subject to move a part of their body, like . In fact, before performing a movement, we rehearse it in our minds and we activate a specific brain area .This process is called motor imagery (MI), and the resulting brain signal can be recorded and interpreted to  enhance  a therapy.</p>
+
+<p>During the rehabilitation process, it is fundamental that the patient feels ownership over the movement of the limbs. For this reason, the treatment involves Functional Electrictrical Stimulation (FES) to stimulate the forearm muscles and move the limb. After interpreting the brain signal, the FES is responsible for moving the correct limb, in this case, right or left hand. Consequently, the patient obtains positive feedback and reinforcement each time he performs the right motor imagery.</p>
+<h2 id="data-description">Data description</h2>
+<p>The three patients involved in this experiment had upper extremity hemiparesis. Each participant was involved in three months of MI training. Before and after this intervention, the data has been stored to evaluate the improvement caused by the treatment.
+For each patient, we have four datasets:
+Before rehabilitation:</p>
+<ul>
+  <li>Training set</li>
+  <li>Testing set
+After rehabilitation:</li>
+  <li>Training set</li>
+  <li>Testing set
+The data we received was a MATLAB matrix. In particular, we had:
+A y matrix that contained the recorded signal for each of the 16 channels with sampling rate of 256 Hz;
+a trigger vector that included 0, 1 and -1 values corresponding to the movement of the right hand, the left one, or no movement at all;</li>
+</ul>
+
+<h2 id="methods">Methods</h2>
+<h3 id="preprocessing">Preprocessing</h3>
+<p>An EEG signal is composed of a sum of different potentials generated by neuronal  activity, and  different frequencies underline different phenomena. Generally, EEG signals present some spurious artifacts not related to the task of interest, for example, a blink of eyes, a movement of the head, or simply the powerline noise. Therefore, the first step to deal with EEG signals consists of filtering the signal both on time and spatial domains. 
+We carried out this process relying on EEGlab, a Matlab Toolbox from SCCN.</p>
+
+<p>Preparation and imagination of movement produce an event-related desynchronization (ERD) or synchronization (ERS) over the sensorimotor areas. This phenomenon originates power changes over the mu and beta rhythms (i.e. around the 8–30Hz frequency band). For this reason, we applied a Butterworth bandpass filter of eight orders between these frequencies.
+Before applying the filter, we cut the first 10-15 seconds of acquired data since no tasks were performed at this time and there was no useful information.
+To perform spatial filtering, we use the independent component analysis (ICA), which is a linear decomposition method that permits the removal of artifacts like eye movements or face muscles activation from signals. The way it operates is by identifying the projection patterns of the source to the scalp surface. It is then possible to localize the unwanted artifacts and eliminate them. 
+During our analysis, we did not locate any artifacts: probably the exploited BCI had already filtered those effectively.</p>
+
+<p>ICA applied on the sixteen channels:</p>
+
+<figure>
+	<a href="../eeg/eeg2.png"><img src="../eeg/eeg2.png" /></a>
+	<figcaption></figcaption>
+</figure>
+
+<p>Once we have filtered our signals, we split both the filtered and unfiltered data into epochs of 2, 6 and 8 seconds.</p>
+
+<h3 id="feature-extraction">Feature extraction</h3>
+<p>To enhance the classification process, we extracted signal features from data by using Common Spatial Pattern (CSP). The objective is to separate the data by projecting them according to the variance, maximizing it for one class and simultaneously minimizing it on the other class. This aim is reached by applying spatial filters which map the channels into a new space where the variance difference is much more discriminative.
+To better understand, let’s have a look at the filtered data before and after  CSP application. In Figure 1 we represent signal of channel 1 and 16 before in the original space: as we can see, the two classes strongly overlap.</p>
+
+<figure>
+	<a href="../eeg/eeg3.png"><img src="../eeg/eeg3.png" /></a>
+	<figcaption></figcaption>
+</figure>
+
+<p>Representation of the data before CSP was performed: It is impossible to distinguish the two classes.
+In Figure 2, we represent the same data rotated by CSP. As expected, the two classes  are now well separated. In particular, the blue class present a high variance along the vertical axis, while the orange class along the horizontal axis. Thus, by looking at the variance we can easily distinguish  the two classes.
+Plotted data after CSP: the separation is easily identified:</p>
+
+<figure>
+	<a href="../eeg/eeg4.png"><img src="../eeg/eeg4.png" /></a>
+	<figcaption></figcaption>
+</figure>
+
+<h3 id="classification">Classification</h3>
+<p>The model has to be trained to be able to make predictions. In this case, the classifier is supervised since we train the model on labeled data.
+Our goal was to find the best classifier for the data we were given. In particular, we employed Linear Discriminant Analysis (LDA), Support Vector Machine (SVC), Logistic Regression (logreg) and Multilayer Perceptron (MLP).
+One way to  train different models and selecting the one with best performance is by using a Cross-Validation Grid Search which performs a tuning to find the best hyperparameters. In that way, we can find the best model and evaluate it over the test data to obtain accuracy on data that the model has never seen.
+To have a graphic visualization of the accuracies, we plotted them for the three patients and the different datasets (the combination between filtered and raw or pre and post), as reported in the image.</p>
+
+<figure>
+	<a href="../eeg/eeg5.png"><img src="../eeg/eeg5.png" /></a>
+	<figcaption></figcaption>
+</figure>
+
+<p>Accuracies for the datasets from different patients.</p>
+
+<h2 id="discussion">Discussion</h2>
+<p>The first evaluation made on the LDA classificator confirmed the results observed in the paper, reaching an accuracy of around 60–70%.
+We then tried to obtain a better classification of the data. For this reason, we performed a grid search to find the best hyperparameters.
+We managed to reach this objective by involving different classificators. We followed two roads to do so: first of all, we looked for classification over the single patients, and then we tried to find a single model valid for all the patients.
+For both of them, we tried to assess the best combination of classifier and signal processing filtering step for two different scenarios:
+short-epoch BCI application (2 sec)
+long-epoch BCI application (6 sec)
+The grid search has been performed over the following hyperparameters:</p>
+
+<p>All the accuracies found were higher than the ones obtained with LDA. We found different models between patients but also between filtered and unfiltered datasets. In this way, our model does not require performing any preliminary filtering. It makes the process easier and quicker and could result in useful treatments and practice.
+To check that the model was not overfitting the data, we tested it both on the test dataset and the train one. The obtained accuracies were comparable, reassuring us about the process.
+To quantify the model’s performance, we used the AUC-ROC, the area under the ROC graph. By looking at this graph we can understand how well our model can separate the classes.</p>
+
+<figure>
+	<a href="../eeg/eeg6.png"><img src="../eeg/eeg6.png" /></a>
+	<figcaption></figcaption>
+</figure>
+
+<p>ROC graph for the two seconds epoch division.</p>
+
+<p>Another way to quantify the results is by using the confusion matrix, which can confront the predicted and actual values.</p>
+
+<figure>
+	<a href="../eeg/eeg7.png"><img src="../eeg/eeg7.png" /></a>
+	<figcaption></figcaption>
+</figure>
+
+<p>Confusion matrix obtained for the two seconds epoch division</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>According to our results:
+for the patient-specific model, we achieved better results by working with filtered data (LogReg classifier for short-epoch; MLP for long-epoch)
+for the generalized model, we achieved better results with raw data (MLP for both scenarios)
+We achieved two important and valuable conclusions. First of all, we found models that can classify the movements better than what has been done with LDA in the paper. 
+Secondly, we decided to create a model based on multiple patients. That could be hard to obtain because of the big variability between patients who suffered from ictus. We however managed to apply it successfully over the three patients we had. That should be further investigated using a wider dataset and many more patients. In this way, we could both verify if the process works or if we have just been lucky and if, by involving more patients, we can obtain an even better model. The fact that this works better on unfiltered data could be connected to the fact that we are also deleting important pieces of information and not only the noise.</p>
+
+<h2 id="credits">Credits</h2>
+<p>Beatrice Villata, Eleonora Misino, Caterina Putti, Lorenzo Migliori and I worked together on this project during 24 awesome(and crazy) hours but it was a very valuable and interesting experience!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#project" class="page__taxonomy-item p-category" rel="tag">project</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-07-16T00:00:00+02:00">July 16, 2021</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=EEG+Analysis%20http%3A%2F%2Flocalhost%3A4000%2Fprojects%2F2021-07-16-EEG_Analysis%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2F2021-07-16-EEG_Analysis%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2F2021-07-16-EEG_Analysis%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/projects/2021-08-05-latinBERT/" class="pagination--pager" title="LatinBert
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+      </div>
+    </div>
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/pietro-sillano" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Pietro Sillano. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
