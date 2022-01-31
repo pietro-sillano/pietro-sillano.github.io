@@ -24,7 +24,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Particles in Electromagnetic Fields",
-        "excerpt":"Introduzione In numerosi campi della fisica é importante studiare la dinamica delle singole particelle, sono peró pochi i casi in cui una soluzione analitica é possibile. Per esempio, se considero una particella carica in movimento interagisce con il campo elettromagnetico, l’equazione che ne descrive la dinamica é la seguente :...","categories": ["project"],
+        "excerpt":"Introduction In many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible. For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is...","categories": ["project"],
         "tags": ["Physics Simulation"],
         "url": "/projects/2022-01-31-EMfield/",
         "teaser": null

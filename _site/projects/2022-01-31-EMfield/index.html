@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Particles in Electromagnetic Fields | SullivanStuff</title>
-<meta name="description" content="Introduzione In numerosi campi della fisica é importante studiare la dinamica delle singole particelle, sono peró pochi i casi in cui una soluzione analitica é possibile.  Per esempio, se considero una particella carica in movimento interagisce con il campo elettromagnetico, l’equazione che ne descrive la dinamica é la seguente :">
+<meta name="description" content="Introduction In many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible.  For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is the following:">
 
 
   <meta name="author" content="Pietro Sillano">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/projects/2022-01-31-EMfield/">
 
 
-  <meta property="og:description" content="Introduzione In numerosi campi della fisica é importante studiare la dinamica delle singole particelle, sono peró pochi i casi in cui una soluzione analitica é possibile.  Per esempio, se considero una particella carica in movimento interagisce con il campo elettromagnetico, l’equazione che ne descrive la dinamica é la seguente :">
+  <meta property="og:description" content="Introduction In many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible.  For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is the following:">
 
 
 
@@ -316,14 +316,30 @@
 
 
 <!--  SCRIPT PER LATEX   -->
-  <script
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
-  type="text/javascript">
-  </script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Particles in Electromagnetic Fields">
-    <meta itemprop="description" content="IntroduzioneIn numerosi campi della fisica é importante studiare la dinamica delle singole particelle, sono peró pochi i casi in cui una soluzione analitica é possibile. Per esempio, se considero una particella carica in movimento interagisce con il campo elettromagnetico, l’equazione che ne descrive la dinamica é la seguente :">
+    <meta itemprop="description" content="IntroductionIn many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible. For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is the following:">
     <meta itemprop="datePublished" content="2022-01-31T00:00:00+01:00">
     
 
@@ -363,67 +379,75 @@
           <aside class="sidebar__right sticky">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#introduzione">Introduzione</a></li><li><a href="#scelta-dellintegratore-numerico">Scelta dell’integratore numerico</a></li><li><a href="#singola-particella-e-b">Singola particella e B</a><ul><li><a href="#velocitá-parallela">Velocitá parallela}</a></li><li><a href="#velocitá-perpendicolare">Velocitá perpendicolare}</a></li><li><a href="#confronto-rk2-rk4-e-boris-pusher">Confronto Rk2, Rk4 e Boris Pusher}</a></li></ul></li><li><a href="#exb-drift">ExB Drift</a></li><li><a href="#10k-particelle">10k Particelle</a></li><li><a href="#conclusioni">Conclusioni</a></li></ul>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#choice-of-the-numerical-integrator">Choice of the numerical integrator</a></li><li><a href="#one-particle-and-magnetic-field-b">One particle and magnetic field B</a><ul><li><a href="#parallel-velocity">Parallel Velocity</a></li><li><a href="#normal-velocity">Normal Velocity</a></li><li><a href="#comparison-betweeen-rk2-rk4-and-boris-pusher">Comparison betweeen Rk2, Rk4 and Boris Pusher</a></li></ul></li><li><a href="#exb-drift">ExB Drift</a></li><li><a href="#10k-particles">10k Particles</a></li><li><a href="#conclusions">Conclusions</a></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="introduzione">Introduzione</h1>
-<p>In numerosi campi della fisica é importante studiare la dinamica delle singole particelle, sono peró pochi i casi in cui una soluzione analitica é possibile. <br />
-Per esempio, se considero una particella carica in movimento interagisce con il campo elettromagnetico, l’equazione che ne descrive la dinamica é la seguente :</p>
+        <h1 id="introduction">Introduction</h1>
+<p>In many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible. <br />
+For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is the following:</p>
 
 <p>\begin{equation} \label{eq:1}
 \frac{d\mathbf{v}}{dt}=\frac{q}{m}(\mathbf{E}+\mathbf{v}\times\mathbf{B}) 
 \end{equation}
-La soluzione analitica é possibile in pochi casi, in particolare con configurazioni di $\mathbf{E}$ e $\mathbf{B}$ semplici. Risulta quindi fondamentale ricorrere a metodi numerici, in particolare in questo caso integrare numericamente l’equazione del moto \eqref{eq:1}.<br />
-Come primo passo verso la soluzione numerica é la riscrittura di \eqref{eq:1} da unitá SI in forma adimensionale, in modo da evitare eventuali cancellazioni numeriche dovute alle differenti scale delle grandezze presenti.</p>
+The analytical solution is possible in a few cases, in particular with simple $ \mathbf{E} $ and $ \mathbf{B} $ configurations. It is therefore essential to resort to numerical methods, in particular in this case numerically integrate the equation of motion.<br />
+The first step towards the numerical solution is the rewriting of from SI units in a dimensionless form, to avoid any numerical cancellations due to the different scales of the quantities present.</p>
 
-<p>\(\mathbf{\mathbf{\tilde{v}}}=\frac{\mathbf{v}}{v_0} \;\;\;\;\tilde{t}=\frac{t}{t_0} \;\; \; \tilde{\mathbf{E}}=\frac{\mathbf{E}}{E_0}  \; \;\;\tilde{\mathbf{B}}=\frac{\mathbf{B}}{B_0}\) <br />
-dove $v_0,\;t_0,\; E_0,\; B_0$ sono costanti con le stesse dimensioni della variabile iniziale in modo da ottenere numeri puri adimensionali.
-Posso riscrivere $\mathbf{v},\;t,\;\mathbf{E},\;\mathbf{B}$ come</p>
+<!--$$\mathbf{\mathbf{\tilde{v}}}=\frac{\mathbf{v}}{v_0} \;\;\;\;\tilde{t}=\frac{t}{t_0} \;\; \; \tilde{\mathbf{E}}=\frac{\mathbf{E}}{E_0}  \; \;\;\tilde{\mathbf{B}}=\frac{\mathbf{B}}{B_0}$$ \\
+dove $v_0,\;t_0,\; E_0,\; B_0$ they are constants with the same dimensions as the initial variable to obtain pure dimensionless numbers.
+Can I rewrite $ \mathbf{v}, \; t, \; \mathbf{E}, \; \mathbf{B} $ as
 
-<p>\(\mathbf{v}=\tilde{\mathbf{v}}\;v_0 \; \; \; t=\tilde{t}\;t_0 \;\; \; \mathbf{E}=\tilde{\mathbf{E}}\;E_0 \;\; \;\mathbf{B}=\tilde{\mathbf{B}}\;B_0\)
-Sostituisco nell’equazione \eqref{eq:1}:</p>
+$$ \mathbf{v}=\tilde{\mathbf{v}}\;v_0 \; \; \; t=\tilde{t}\;t_0 \;\; \; \mathbf{E}=\tilde{\mathbf{E}}\;E_0 \;\; \;\mathbf{B}=\tilde{\mathbf{B}}\;B_0 $$-->
 
-\[\frac{v_0d\mathbf{\tilde{v}}}{t_0d\tilde{t}}=\frac{q}{m}(\mathbf{\tilde{E}}E_0+\mathbf{\mathbf{\tilde{v}}}v_0\times\mathbf{\tilde{B}}B_0) \quad  \quad \frac{d\mathbf{\tilde{v}}}{d\tilde{t}} =\frac{qt_0}{mv_0}(\mathbf{\tilde{E}}E_0+\mathbf{\tilde{v}}v_0\times\mathbf{\tilde{B}}B_0)\]
+<!--Sostituisco nell'equazione \eqref{eq:1}:
 
-\[\frac{d\mathbf{\tilde{v}}}{d\tilde{t}}=\frac{qt_0 E_0}{mv_0}\mathbf{E}+\frac{qt_0}{mv_0}v_0 B_0  v \times \mathbf{B}\]
+$$\frac{v_0d\mathbf{\tilde{v}}}{t_0d\tilde{t}}=\frac{q}{m}(\mathbf{\tilde{E}}E_0+\mathbf{\mathbf{\tilde{v}}}v_0\times\mathbf{\tilde{B}}B_0) \quad  \quad \frac{d\mathbf{\tilde{v}}}{d\tilde{t}} =\frac{qt_0}{mv_0}(\mathbf{\tilde{E}}E_0+\mathbf{\tilde{v}}v_0\times\mathbf{\tilde{B}}B_0)$$
 
-<p>\(\frac{qt_0 E_0}{mv_0}=1 \;\;\;\;\; t_0=\frac{mv_0}{q E_0}\)
+$$\frac{d\mathbf{\tilde{v}}}{d\tilde{t}}=\frac{qt_0 E_0}{mv_0}\mathbf{E}+\frac{qt_0}{mv_0}v_0 B_0  v \times \mathbf{B} $$
+
+
+$$\frac{qt_0 E_0}{mv_0}=1 \;\;\;\;\; t_0=\frac{mv_0}{q E_0}$$
 sostituisco $t_0$ nel coefficiente davanti a $\mathbf{v} \times \mathbf{B}:$
-\(\frac{qB_0}{m } \frac{m v_0}{q E_0}=\frac{B_0}{E_0}{v_0}=1 \;\;\;\;\; E_0=B_0v_0\)
-In questo modo ottengo la forma adimensionale dell’equazione di Lorentz (omettendo le tilde):
-\(\frac{d\mathbf{v}}{dt}=\mathbf{E}+\mathbf{v} \times \mathbf{B}\)
-Non sembra molto diversa rispetto alla prima versione ma ora le grandezze sono adimensionali. <br />
-Con questa procedura di adimensionalizzazione definisco delle scale rispetto a cui tratto il problema per via numerica.
-\(t_0 = \frac{m  v_0}  {q  E_0}\; [s] \qquad v_0 = \frac{E_0}{B_0} \; \left[\frac{m}{s}\right] \qquad l_0 = v_0\;t_0 \; [m]\)</p>
+$$\frac{qB_0}{m } \frac{m v_0}{q E_0}=\frac{B_0}{E_0}{v_0}=1 \;\;\;\;\; E_0=B_0v_0$$
+In questo modo ottengo la forma adimensionale dell'equazione di Lorentz (omettendo le tilde):
+$$\frac{d\mathbf{v}}{dt}=\mathbf{E}+\mathbf{v} \times \mathbf{B} $$
+Non sembra molto diversa rispetto alla prima versione ma ora le grandezze sono adimensionali. \\-->
 
-<h1 id="scelta-dellintegratore-numerico">Scelta dell’integratore numerico</h1>
-<p>Per quanto riguarda la scelta del metodo di integrazione dell’equazione differenziale ho confrontato tre differenti integratori: \emph{Runge-Kutta 2°  ordine, Runge-Kutta 4° ordine} e in quanto il sistema é hamiltoniano un integratore simplettico che conserva l’energia totale del sistema. <br />
-Gli integratori simplettici \emph{Position-Verlet} e \emph{Velocity-Verlet} spesso usati per integrare le equazioni del moto non sono adatti in quanto una delle ipotesi di questi metodi é che la forza sia indipendente dalla velocitá.<br />
-Ho usato quindi il \emph{Boris Pusher} un integratore simplettico adatto ad integrare l’equazione del moto di una particella soggetta alla forza di Lorentz. (A\ref{boris} per l’implementazione )<br />
-Per dimostrare i vantaggi dell’integratore di Boris analizzeró un caso semplice ossia il moto di una particella carica immersa in un campo magnetico costante.</p>
+<p>Con questa procedura di adimensionalizzazione definisco delle scale rispetto a cui tratto il problema per via numerica.
+\(t_0 = \frac{m  v_0} {q  E_0}\; [s] \qquad v_0 = \frac{E_0}{B_0} \; \left[\frac{m}{s}\right] \qquad l_0 = v_0\;t_0 \; [m]\)</p>
 
-<h1 id="singola-particella-e-b">Singola particella e B</h1>
+<h1 id="choice-of-the-numerical-integrator">Choice of the numerical integrator</h1>
+<p>As regards the choice of the integration method of the differential equation, I compared three different integrators:  Runge-Kutta 2nd order, Runge-Kutta 4th order and as the system is Hamiltonian a symplectic integrator that preserves the total system energy. <br />
+The symplectic integrators  Position-Verlet and  Velocity-Verlet often used to integrate the equations of motion are not suitable as one of the hypotheses of these methods is that the force is independent of the velocity. <br />
+I therefore used the  Boris Pusher} a symplectic integrator suitable for integrating the equation of motion of a particle subject to the Lorentz force. <br />
+To demonstrate the advantages of the Boris integrator I will analyze a simple case that is the motion of a charged particle immersed in a constant magnetic field.</p>
+
+<h1 id="one-particle-and-magnetic-field-b">One particle and magnetic field B</h1>
 <p>Considero due casi uno in cui la velocitá della particella é parallela a B e in cui la velocitá é perpendicolare a B.</p>
 
-<h2 id="velocitá-parallela">Velocitá parallela}</h2>
-<p>\(\mathbf{v}_0=(0,0,v_z) \qquad v_z=1\)
-\(\mathbf{B}=(0,0,B_z) \qquad B_z=1\)
-Otteniamo una dinamica di questo tipo:
-\(\begin{cases} 
-\frac{dv_x}{dt}= 0 \\ 
-\frac{dv_y}{dt}= 0   \\ 
-\frac{dv_z}{dt}= 0 
-\end{cases}\)
-per cui la $\mathbf{v}$ sará costante, uguale a $v_0$ iniziale per cui la particella si muoverá di moto uniforme in direzione $z$.</p>
+<h2 id="parallel-velocity">Parallel Velocity</h2>
 
-<h2 id="velocitá-perpendicolare">Velocitá perpendicolare}</h2>
+\[\mathbf{v}_0=(0,0,v_z) \qquad v_z=1\]
+
+\[\mathbf{B}=(0,0,B_z) \qquad B_z=1\]
+
+<p>Otteniamo una dinamica di questo tipo:</p>
+
+\[\begin{cases} 
+\frac{dv_x}{dt}= 0 \\
+\frac{dv_y}{dt}= 0   \\
+\frac{dv_z}{dt}= 0 
+\end{cases}\]
+
+<p>per cui la $\mathbf{v}$ sará costante, uguale a $v_0$ iniziale per cui la particella si muoverá di moto uniforme in direzione $z$.</p>
+
+<h2 id="normal-velocity">Normal Velocity</h2>
 <p>\(\mathbf{v}_0=(v_x,0,0) \qquad v_x=1\)
 \(\mathbf{B}=(0,0,B_z) \qquad B_z=1\)
 \(\begin{cases} 
-\frac{dv_x}{dt}= 0  \\ 
-\frac{dv_y}{dt}= - Bv_x\\ 
+\frac{dv_x}{dt}= 0  \\
+\frac{dv_y}{dt}= - Bv_x\\
 \frac{dv_z}{dt}=0 
 \end{cases}\)
 Eguaglio la forza di Lorentz con la forza centripeta:</p>
@@ -434,67 +458,98 @@ Eguaglio la forza di Lorentz con la forza centripeta:</p>
 \(T=\frac{2\pi}{\omega}=\frac{2\pi R}{v} \qquad T=\frac{2\pi}{v}\frac{v}{B} = \frac{2\pi}{B} = 2\pi\)
 I risultati numerici coincidono con i risultati analitici attesi se si riportano le unitá di misura correttamente. <br />
 Scegliendo come valori arbitrari $E = 0.01 \; \frac{V}{m}$ e $B = 10^{-8} \; T $ e considerando come particella un elettrone quindi  $q = 1.6 \times 10^{-19} \;C $ e $m = 9 \times 10^{-31} \; kg$ otteniamo le scale rispetto alle quali abbiamo adimensionalizzato il problema:
- \(t_0 = \frac{m  v_0}  {q  E_0} =  5.625 \times 10^{-4} \; s  \qquad l_0 = \frac{E_0t_0}{B_0} = 562.5 \; m  \qquad v_0 = \frac{l_0}{t_0} = 10^6 \; \frac{m}{s}\)
-Per esempio volessimo convertire da grandezza adimensionale a unitá SI:
-\begin{itemize}
-\item il raggio dell’orbita circolare: $R = 1 \times l_0 = 562.5 \; m $
-\item il periodo dell’orbita circolare: $T = 2\pi \times t_0 = 3.53 \; s $
-\item l’energia cinetica dell’elettrone: $ E = \frac{1}{2}m \times v_0^2 = 4.5 \times 10^{-19} \;J$
-\end{itemize}</p>
+ \(t_0 = \frac{m  v_0} {q  E_0} =  5.625 \times 10^{-4} \; s  \qquad l_0 = \frac{E_0t_0}{B_0} = 562.5 \; m  \qquad v_0 = \frac{l_0}{t_0} = 10^6 \; \frac{m}{s}\)
+Per esempio volessimo convertire da grandezza adimensionale a unitá SI:</p>
+<ul>
+  <li>il raggio dell’orbita circolare: $R = 1 \times l_0 = 562.5 \; m $</li>
+  <li>il periodo dell’orbita circolare: $T = 2\pi \times t_0 = 3.53 \; s $</li>
+  <li>l’energia cinetica dell’elettrone: $ E = \frac{1}{2}m \times v_0^2 = 4.5 \times 10^{-19} \;J$</li>
+</ul>
 
-<p>emfield/3dposizione.png
-emfield/tempovelocitá.png
-Velocitá perpendicolare a $\mathbf{B}$</p>
+<figure class="half">
+  <a href="../emfield/3dposizione.png">
+  <img src="../emfield/3dposizione.png" /></a>
 
-<h2 id="confronto-rk2-rk4-e-boris-pusher">Confronto Rk2, Rk4 e Boris Pusher}</h2>
+  <a href="../emfield/tempovelocitá.png">
+  <img src="../emfield/tempovelocitá.png" /></a>
+  
+  <figcaption> Velocitá perpendicolare a $\mathbf{B}$ </figcaption>
+</figure>
 
-<p>./emfield/confronto_traiettorie.png
-./emfield/erroreE.png
-Confronto tra RK2, RK4 e Boris Pusher con un timestep dt = 0.25 e 1000 step</p>
+<h2 id="comparison-betweeen-rk2-rk4-and-boris-pusher">Comparison betweeen Rk2, Rk4 and Boris Pusher</h2>
 
-<p>Valuto il diverso comportamento dei tre integratori considerando come varia l’energia della particella durante l’integrazione. 
-Infatti il sistema fisico considerato conserva l’energia iniziale per cui mi aspetto che anche la simulazione numerica la conservi. \ 
-\(\Delta E=\frac{|E-E_0|}{E_0} = \frac{|\mathbf{v}^2 - \mathbf{v}_0^2|}{\mathbf{v}_0^2}\)
-Valuto l’errore relativo sull’energia considerando soltanto l’energia cinetica della particella in quanto il campo magnetico B non fornisce energia in quanto é sempre perpendicolare alla direzione di spostamento, influisce quindi soltanto sulla direzione della velocitá e non sul modulo.
-L’ errore per Rk2 e Rk4 raggiunge valori rilevanti e continuerebbe a crescere, mentre l’algoritmo di Boris mantiene un errore trascurabile costante compreso tra a $10^{-16}$ e $10^{-14}$. Verifichiamo  che l’uso di un integratore simplettico permette la conservazione dell’energia iniziale.
-Nelle simulazioni seguenti sará implementato l’integratore di Boris.</p>
+<figure class="half">
+  <a href="../emfield/confronto_traiettorie.png">
+  <img src="../emfield/confronto_traiettorie.png" /></a>
+
+  <a href="../emfield/erroreE.png">
+  <img src="../emfield/erroreE.png" /></a>
+  
+  <figcaption> Confronto tra RK2, RK4 e Boris Pusher con un timestep dt = 0.25 e 1000 step </figcaption>
+</figure>
+
+<p>I evaluate the different behavior of the three integrators considering how the energy of the particle varies during integration.
+In fact, the considered physical system conserves the initial energy so I expect that the numerical simulation will also preserve it. <br />
+\(\Delta E = \frac{| E-E_0 |}{E_0} = \frac{| \mathbf{v} ^ 2 - \mathbf{v} _0 ^ 2 |}{\mathbf{v} _0 ^ 2 }\)
+I evaluate the relative error on the energy considering only the kinetic energy of the particle as the magnetic field B does not provide energy as it is always perpendicular to the direction of displacement, therefore it affects only the direction of the velocity and not the modulus.
+The error for Rk2 and Rk4 reaches relevant values ​​and would continue to grow, while Boris’ algorithm maintains a constant negligible error between a $ 10 ^{- 16} $ and $ 10 ^{- 14} $. We verify that the use of a symplectic supplement allows the conservation of the initial energy.
+In the following simulations the Boris integrator will be implemented.</p>
 
 <h1 id="exb-drift">ExB Drift</h1>
 <p>Ora consideriamo il moto di una particella in moto in presenza anche di un campo elettrico E oltre al campo magnetico B.
 \(\mathbf{B}=(0,0,B_z) \qquad B_z=1\)
 \(\mathbf{E}=(0,E_y,0) \qquad E_y=0.5\)
 \(\begin{cases} 
-\frac{dv_x}{dt}=v_y B_z \\ 
-\frac{dv_y}{dt}=E_y  \\ 
+\frac{dv_x}{dt}=v_y B_z \\
+\frac{dv_y}{dt}=E_y  \\
 \frac{dv_z}{dt}=0 
 \end{cases}\)</p>
 
-<p>3dposizionedrift.png
-emfield/vdrift.png</p>
+<figure class="half">
+  <a href="../emfield/3dposizionedrift.png">
+  <img src="../emfield/3dposizionedrift.png" /></a>
 
-<p>La traiettoria della particella segue una cicloide lungo la direzione x. Il moto é inaspettato avendo un campo elettrico agente in direzione $y$ che accellera costantemente la particella lungo questa direzione.\<br />
-In realtá, quando la velocitá della particella aumenta cresce anche la forza risultante dall’interazione con $\mathbf{B}$, sempre normale rispetto alla traiettoria.
-Infatti la carica ferma nell’origine subisce un accelerazione lungo y dovuta a $\mathbf{E}$. Appena la carica inizia a muoversi la forza magnetica agisce nella direzione normale alla traiettoria. Questo fino alla fine del periodo dove la forza risultante é nulla, per cui la carica si ferma e il moto si ripete periodico.</p>
+  <a href="../emfield/vdrift.png">
+  <img src="../emfield/vdrift.png" /></a>
+  
+  <figcaption> Plots about ExB Drift </figcaption>
+</figure>
 
-<h1 id="10k-particelle">10k Particelle</h1>
-<p>Posiziono $N = 10^4 $ particelle in un quadrato $L \times L$ con posizione e velocitá uniformemente distribuite. In particolare la velocitá di ognuna sará $|v|=0.1$ e direzione casuale ottenuta con un angolo casuale tra $0$ e $2\pi$.<br />
-Le particelle sono immerse in un campo elettrico e magnetico:
+<p>The trajectory of the particle follows a cycloid along the x direction. The motion is unexpected having an electric field acting in the $ y $ direction which constantly accelerates the particle along this direction. \<br />
+In reality, when the speed of the particle increases, the force resulting from the interaction with $ \mathbf{B} $ also increases, always normal with respect to the trajectory.
+In fact, the charge stopped at the origin undergoes an acceleration along y due to $ \mathbf{E} $. As soon as the charge begins to move the magnetic force acts in the direction normal to the trajectory. This until the end of the period where the resulting force is zero, so the charge stops and the motion is repeated periodically.</p>
+
+<h1 id="10k-particles">10k Particles</h1>
+<p>I place $ N = 10 ^ 4 $ particles in a square $ L \times L $ with uniformly distributed position and velocity. In particular, the velocity of each will be $ | v | = 0.1 $ and a random direction obtained with a random angle between $ 0 $ and $ 2 \pi $. <br />
+The particles are immersed in an electric and magnetic field:
 \(\vec{E}=\left(0,0,\frac{1}{2} \right)\)
 \(\vec{B}=\left(\frac{y}{L},\frac{x}{L},0\right)\) 
-Scrivo le equazioni del moto:
-\(\begin{cases} 
-\frac{dv_x}{dt}= 0 \\ 
-\frac{dv_y}{dt}= 0 \\ 
+Scrivo le equazioni del moto:</p>
+
+\[\begin{cases} 
+\frac{dv_x}{dt}= 0 \\
+\frac{dv_y}{dt}= 0 \\
 \frac{dv_z}{dt}= \frac{1}{2} + \frac{x}{L}v_x - \frac{y}{L}v_y 
-\end{cases}\)
-Le particelle compiono un moto peculiare, infatti le particelle che si trovano nella zona centrale del quadrato, vengono accellerate magiormente verso $z$ dando effetto a una sorta di getto di particelle. Mentre alla base del cono si possono osservare delle oscillazioni concentriche.</p>
+\end{cases}\]
 
-<p>plot laterale</p>
+<p>The particles perform a peculiar motion, in fact the particles located in the central area of ​​the square are accelerated more towards $ z $ giving effect to a sort of jet of particles. While at the base of the cone concentric oscillations can be observed.</p>
 
-<p>plot Posizioni delle particelle in tre diversi istanti</p>
+<figure class="third">
+  <a href="../emfield/distrib_70.png">
+  <img src="../emfield/distrib_70.png" /></a>
 
-<h1 id="conclusioni">Conclusioni</h1>
-<p>Abbiamo considerato tre diversi esempi di particelle in campi elettrici e magnetici, in particolare per l’ultimo caso la simulazione numerica ci ha permesso di comprendere la dinamica non banale del sistema.</p>
+  <a href="../emfield/distrib_120.png">
+  <img src="../emfield/distrib_120.png" /></a>
+  
+  <a href="../emfield/distrib_160.png">
+  <img src="../emfield/distrib_160.png" /></a>
+
+  <figcaption> Particles positions in three different epochs</figcaption>
+</figure>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>We have considered three different examples of particles in electric and magnetic fields, in particular for the last case the numerical simulation has allowed us to understand the non-trivial dynamics of the system.</p>
 
         
       </section>
