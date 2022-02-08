@@ -13,7 +13,7 @@
 #attivare remote theme per github(credo)
 #remote_theme           :  "mmistakes/minimal-mistakes"
 #theme                    : "minimal-mistakes-jekyll"
-minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "air" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 #locale                   : "it-IT"
@@ -111,21 +111,16 @@ author:
   location         : "Turin, Italy"
   email            :  "pietrosillano@gmail.com"
   links:
-      - label: "Linkedin"
-        icon: "fab fa-fw fa-linkedln"
-        url: "https://www.linkedin.com/in/pietro-sillano/"
-      - label: "GitHub"
-        icon: "fab fa-fw fa-github"
-        url: "https://github.com/pietro-sillano"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:pietrosillano@gmail.com"
-    #- label: "Website"
-      #icon: "fas fa-fw fa-link"
-      #url: "https://pietro-sillano.github.io/"
-    #- label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/pietro-sillano/"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/pietro-sillano"
+    #- label: "Email"
+      #icon: "fas fa-fw fa-envelope-square"
+      #url: "mailto:pietrosillano@gmail.com"
+
 
 # Site Footer
 footer:
@@ -140,7 +135,7 @@ footer:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pietro-sillano"
     - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedln"
+      icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/pietro-sillano/"
     #- label: "Bitbucket"
       #icon: "fab fa-fw fa-bitbucket"
@@ -307,6 +302,7 @@ defaults:
       type: pages
     values:
       layout: single
+      classes: wide
       author_profile: false
 
 
