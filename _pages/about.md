@@ -5,10 +5,10 @@ permalink: /about/
 author_profile: true
 
 ---
-<figure class="align-center">
+<!--<figure style="width: 400px" class="align-center">
   <a href="../assets/img/propic.jpeg">
   <img src="../assets/img/propic.jpeg"></a>
-</figure>
+</figure>-->
 
 
 Hi, I'm Pietro Sillano, a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
