@@ -1,9 +1,15 @@
 ---
 title: "About Me"
-#excerpt: "Page not found. Your pixels are in another canvas."
 sitemap: true
 permalink: /about/
+author_profile: true
+
 ---
+<figure class="align-center">
+  <a href="../assets/img/propic.jpeg">
+  <img src="../assets/img/propic.jpeg"></a>
+</figure>
+
 
 Hi, I'm Pietro Sillano, a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and how we can represent many biological phenomena using physics methods and frameworks in particular Statistical Physics.
