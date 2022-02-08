@@ -109,7 +109,7 @@ author:
   avatar           : "/assets/img/propic.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Physics Student, ML & AI passionate"
   location         : "Turin, Italy"
-  email            :  "pietrosillano@gmail.com"
+  #email            :  "pietrosillano@gmail.com"
   links:
     #- label: "Email"
       #icon: "fas fa-fw fa-envelope-square"
