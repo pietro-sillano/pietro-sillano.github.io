@@ -112,7 +112,7 @@ author:
   email            :  "pietrosillano@gmail.com"
   links:
       - label: "Linkedin"
-        icon: "fab fa-fw fa-linkedin"
+        icon: "fab fa-fw fa-linkedln"
         url: "https://www.linkedin.com/in/pietro-sillano/"
       - label: "GitHub"
         icon: "fab fa-fw fa-github"
