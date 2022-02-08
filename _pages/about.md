@@ -11,7 +11,7 @@ author_profile: true
 
 
 Hi, I'm Pietro Sillano, a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
-My main interest of research is **BioPhysics** and how we can represent many biological phenomena using physics methods and frameworks in particular Statistical Physics.
+My main interest of research is **BioPhysics** and how we can represent many world phenomena using physics methods and frameworks like Statistical Physics.
 Moreover thanks to some lectures, I got interested in **ML & AI** and I joined the  <a href="https://www.mljc.it/"> <b>Machine Learning Journal Club  </b> </a>, a student organization from Turin which aims to fill the gap between students and researchers in Machine & Deep Learning related fields.
 
 <!--

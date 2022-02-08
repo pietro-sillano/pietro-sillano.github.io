@@ -107,9 +107,9 @@ analytics:
 author:
   name             : "Pietro Sillano"
   avatar           : "/assets/img/propic.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Physics Student, ML & AI passionate"
+  bio              : "Physics Student, ML & AI passionate, Member of MLJC"
   location         : "Turin, Italy"
-  email            :  "pietrosillano@gmail.com"
+  #email            :  "pietrosillano@gmail.com"
   links:
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
@@ -117,9 +117,13 @@ author:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pietro-sillano"
-    #- label: "Email"
-      #icon: "fas fa-fw fa-envelope-square"
-      #url: "mailto:pietrosillano@gmail.com"
+
+    - label: "MLJC Website"
+      icon: "fas fa-fw fa-laptop"
+      url: "https://www.mljc.it/"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:pietrosillano@gmail.com"
 
 
 # Site Footer
