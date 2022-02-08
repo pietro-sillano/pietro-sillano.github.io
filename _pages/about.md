@@ -3,7 +3,6 @@ title: "About Me"
 sitemap: true
 permalink: /about/
 author_profile: true
-
 ---
 <!--<figure style="width: 400px" class="align-center">
   <a href="../assets/img/propic.jpeg">
