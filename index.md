@@ -11,7 +11,7 @@ header:
 ---
 
 
-# About me
+<!--# About me-->
 I'm currently a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and **Statistical Physics**.
 
