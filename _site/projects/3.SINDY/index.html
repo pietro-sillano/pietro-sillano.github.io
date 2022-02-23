@@ -1,0 +1,799 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Autoencoder + SINDy + Pendulum | SullivanStuff</title>
+<meta name="description" content="Introduction">
+
+
+  <meta name="author" content="Pietro Sillano">
+  
+  <meta property="article:author" content="Pietro Sillano">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="SullivanStuff">
+<meta property="og:title" content="Autoencoder + SINDy + Pendulum">
+<meta property="og:url" content="http://localhost:4000/projects/3.SINDY/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-02-23T16:19:50+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/projects/3.SINDY/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Pietro Sillano",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SullivanStuff Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+<meta name="msapplication-config" content="../assets/favicons/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SullivanStuff
+          <span class="site-subtitle"></span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/projects" itemprop="item"><span itemprop="name">Projects</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Autoencoder + SINDy + Pendulum</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+
+
+<!--  SCRIPT PER LATEX   -->
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true},
+      jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+      extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+      TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+      equationNumbers: {
+      autoNumber: "AMS"
+      }
+    }
+  });
+</script>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Autoencoder + SINDy + Pendulum">
+    <meta itemprop="description" content="Introduction">
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/projects/3.SINDY/" class="u-url" itemprop="url">Autoencoder + SINDy + Pendulum
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          12 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#task">Task</a></li><li><a href="#methods">Methods</a><ul><li><a href="#dataset">Dataset</a></li><li><a href="#network-architecture">Network architecture</a></li><li><a href="#sindy-sparse-identification-of-nonlinear-dynamical-systems">Sindy: Sparse Identification of Nonlinear Dynamical systems</a></li><li><a href="#loss">Loss</a></li></ul></li><li><a href="#results">Results</a></li><li><a href="#possible-future-developments">Possible future developments</a></li><li><a href="#code">Code</a></li><li><a href="#appendix">Appendix</a><ul><li><a href="#creation-of-the-synthetic-dataset">Creation of the synthetic dataset</a></li><li><a href="#propagation-of-time-derivatives">Propagation of time derivatives</a></li><li><a href="#training-details">Training Details</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="introduction">Introduction</h1>
+
+<p>The use of neural networks or deep learning for the prediction of dynamics
+of dynamical systems presents some criticalities, among which problems of
+generalization outside the training set examples and also a
+lack of interpretability of the model obtained, due to the great
+the number of parameters of such models.</p>
+
+<h1 id="task">Task</h1>
+
+<p>The goal is to find a set of equations that can
+capture the dynamics of the system and that it is at the same time the most
+simple as possible. The idea of ​​the considered paper is to combine
+an <strong>autoencoder</strong> that carries out a reduction in dimensionality
+of the input and a method called <strong>SINDy</strong> (Sparse Identification of
+Nonlinear Dynamics) that can find a dynamic model for the
+system in the new latent coordinates. 
+In fact, the data that is collected does not always represent the
+dynamics of the system in the best or simplest way
+possible representation for which SINDy would fail or identify
+templates with many parameters. 
+While autoencoders perform dimensional reductions but not
+they ensure that the new variables in latent space will have patterns
+simple associated dynamics. It is therefore appropriate to use these
+two methods simultaneously, in order to correctly identify the
+dynamic but at the same time have a simple dynamic model.</p>
+
+<h1 id="methods">Methods</h1>
+
+<h2 id="dataset">Dataset</h2>
+
+<p>The dataset considered is a collection of snapshots (51x51 images
+pixel) of a video of a pendulum. The dataset used is generated
+briefly (more details in the appendix) for which one has a certain
+freedom in creating the dataset.</p>
+
+<figure>
+  <a href="../sindy/pendulum_motion.png">
+  <img src="../sindy/pendulum_motion.png" /></a>
+  <figcaption> Three samples of the considered dataset, 51 x 51 pixels </figcaption>
+</figure>
+
+<p>We used 100 initial conditions for to generate the dataset
+$ \theta_0 $ and 100 for $ \omega_0 $ by combining them together and excluding the initial conditions for which the dynamics of the pendulum is not a cycle limit. Overall, therefore, we have about 5000 initial conditions different, for each of these we have 100 snapshots and each snapshot is a samples with 2601 (51x51) features.</p>
+
+<h2 id="network-architecture">Network architecture</h2>
+
+<p>The architecture used is a simple fully connected autoencoder.
+The autoencoder learns a non-linear representation of the input in a
+reduced latent space compared to the dimensionality of the samples. The encoder takes as input $ \mathbf{x} (t) \in \mathbb {R} ^ n $ with $ n = 2601 $ and performs a coordinate transformation
+$ \mathbf {z} (t) = \phi (\mathbf {x} (t)) \in \mathbb {R} ^ d $ where d is the small latent space size. While the decoder performs a transformation $ \tilde {\mathbf {x}} \approx \psi (\mathbf {z}) $ trying to reconstruct the original input. The network consists of:</p>
+
+<ul>
+  <li>
+    <p>encoder: 3 fully connected layers of 128, 64, 32 neurons</p>
+  </li>
+  <li>
+    <p>a hidden layer made up of a few neurons that acts as a latent
+  space,</p>
+  </li>
+  <li>
+    <p>decoder: 3 layers fully connected inverted with respect to the encoder, therefore 32, 64, 128 neurons.</p>
+  </li>
+</ul>
+
+<p>The architecture presented in the paper has been rewritten in PyTorch.
+[@pytorch]</p>
+
+<h2 id="sindy-sparse-identification-of-nonlinear-dynamical-systems">Sindy: Sparse Identification of Nonlinear Dynamical systems</h2>
+
+<p>It is a sparse regression method applied to a library of possibles
+candidate functions to reconstruct the dynamics of dynamic systems
+(also non-linear). [@pysindy] <br />
+To build the dynamic model starting from the input data we use a
+function library and rephrase the problem in the form of
+regression:</p>
+
+<p>\(\dot {Z} = \mathbf {\Theta} (Z) \mathbf {\Xi}\) The matrix
+$ \mathbf {\Theta} (Z) $ is constructed by combining candidate functions together:
+\(\mathbf {\Theta} (Z) =
+\begin {pmatrix}
+z_1 (t_0) &amp; z_2 (t_0) &amp; z_3 (t_0) &amp; ... &amp; sin (x_1 (t_0)) &amp; \sqrt {x_2 (t_0)} &amp; ... \\
+z_1 (t_1) &amp; ... &amp; ... \\
+ ... &amp; ... \\
+z_1 (t_f)
+\end {pmatrix}\) While the unknown matrix $ \mathbf {\Xi} $ contains i
+coefficients that determine the active terms of the theta matrix.
+Ideally we would like the sparse matrix so that we have few terms
+selected from $ \mathbf {\Theta} $. The coefficients $ \xi $ are
+updated by the network during training as the $ \omega $ weights of the
+net.<br />
+\(\mathbf {\Xi} =
+\begin {pmatrix}
+\xi_ {1,1} &amp; \xi_ {1,2} &amp; \xi_ {1,3} \\
+\xi_ {2,1} &amp; ... &amp; ... \\
+\xi_ {3,1}
+\end {pmatrix}\) For example, if I wanted to reconstruct the dynamics of the
+one-dimensional system $ \dot {x} = \sin (x) $ I would have:</p>
+
+\[\dot {X} =
+\begin {pmatrix}
+x (t_0) &amp; x ^ 2 (t_0) &amp; \sqrt {x (t_0)} &amp; \sin (x (t_0) &amp; ... \\
+x (t_1) &amp; ... &amp; ... \\
+ ... &amp; ... \\
+x (t_f)
+\end {pmatrix}
+\begin {pmatrix}
+0 \\
+0 \\
+0 \\
+1 \\
+... \\
+0
+\end {pmatrix}
+=
+\begin {pmatrix}
+\sin (x (t_0) \\
+\sin (x (t_1) \\
+\sin (x (t_2) \\
+... \\
+... \\
+\sin (x (t_f)
+\end {pmatrix}
+= \sin (X)\]
+
+<h2 id="loss">Loss</h2>
+
+<p>The two methods are combined with each other via the cost function
+$ L $; in fact it will not simply be the MSE loss (mean squared loss) between
+the autoencoder input $ x $ and the reconstruction $ \tilde {x} $ but they come
+added terms that guarantee in addition to the reconstruction of the input,
+also the reconstruction of the time derivatives $ \dot {x} $ and $ \dot {z} $ e
+finally, a regularization term L1 on the coefficients
+$ \mathbf {\Xi} $. <br />
+For a dataset with $ m $ samples as input, each loss is defined as
+follows:</p>
+
+<ul>
+  <li>
+    <p>$ L_ {recon} = \frac {1} {m} \sum_ {i = 1} ^ {m} | x_i - \tilde {x_i} | _2 ^ 2 $
+  measures how well the autoencoder is able to reconstruct the input x.</p>
+  </li>
+  <li>
+    <p>$ L_ {dz} = \frac {1} {m} \sum_ {i = 1} ^ {m} | \dot {z_i} - \Theta (z_i) \mathbf {\Xi} | _2 ^ 2 $
+  measures how well the model predicts the time derivative correctly
+  of the intrinsic variables $ z $.</p>
+  </li>
+  <li>
+    <p>$ L_ {dx} = \frac {1} {m} \sum_ {i = 1} ^ {m} | \dot {x_i} - \dot {\tilde {x_i}} | _2 ^ 2 $
+  measures as much as Sindy’s predictions ie $ \dot {\tilde {x}} $
+  they reconstruct the original input $ \dot {x} $.</p>
+  </li>
+  <li>
+    <p>$ L_ {reg} = \frac {1} {pd} \sum_ {i = 1} ^ {pd} | {\mathbf {\Xi}} | _1 $ is a
+  L1 regularization which promotes the sparsity of the coefficients
+  $ \mathbf {\Xi} $ which coincides with identifying dynamic models
+  simple.</p>
+  </li>
+</ul>
+
+<p>So by combining the four loss terms together with the relative ones
+hyperparameters the overall loss is the following:
+\(L_ {tot} = L_ {recon} + \lambda_1L_ {dx} + \lambda_2L_ {dz} + \lambda_3L_ {reg}\)</p>
+
+<h1 id="results">Results</h1>
+
+<p>One of the difficulties during model selection is the lack of one
+measure of accuracy of the dynamics identified, therefore I had to
+consider the correctness of the coefficients and the parsimoniousness of the
+dynamic model identified. Not all tested models have
+identified a plausible dynamic. The best model has
+found: \(\begin {cases}
+\dot {z_3} = 0.381 z_8 \\
+\dot {z_8} = - 0.672 z_3
+\end {cases}\) Where $ z_3 $ and $ z_8 $ are two of the latent variables
+extracted from the autoencoder and are the most representative of the
+dynamic. This is due to the fact that the other coefficients were
+null or close to zero and therefore I was able to neglect them. Model
+identified fails to perfectly recover the initial dynamics
+of the pendulum but correctly captures its dynamics in approximation
+of small angles (linearized model).</p>
+
+<p>! [True and reconstructed attractor] (sindy / attractor.png) {width = “\textwidth”}</p>
+
+<h1 id="possible-future-developments">Possible future developments</h1>
+
+<ul>
+  <li>
+    <p>Extend to other dynamic systems.</p>
+  </li>
+  <li>
+    <p>Use a convolutional autoencoder as I expect the
+  relevant features of the input are local.</p>
+  </li>
+  <li>
+    <p>Introduce a system of second order time derivatives e
+  then try to rebuild $ \ddot {x} $ from $ x $ directly.</p>
+  </li>
+</ul>
+
+<h1 id="code">Code</h1>
+
+<p>Implementing the code on
+<a href="https://github.com/pietro-sillano/SindyPendulum">https://github.com/pietro-sillano/SindyPendulum</a>.</p>
+
+<h1 id="appendix">Appendix</h1>
+
+<h2 id="creation-of-the-synthetic-dataset">Creation of the synthetic dataset</h2>
+
+<p>Recalling the equation of motion of a simple pendulum:
+\(\ddot {\theta} = - \sin (\theta)\) I can rewrite it as a system
+of two first-order ODEs, namely:</p>
+
+<p>\(\begin {cases}
+\dot {\theta} = \omega \\
+\dot {\omega} = - \sin (\theta)
+\end {cases}\) with initial conditions $ \theta_0 $ and $ \omega_0 $ chosen
+arbitrarily. I have numerically integrated this system from $ t = 0 $ a
+$ t = $ 5 with an RK4 supplement (Runge-Kutta of the $ 4 ^ or $ order) with a
+timestep $ dt = 0.05 $. Next to generate the pendulum video
+I evaluated a 2D Gaussian function on a 51 x 51 point grid.
+\(G (x, y, \theta (t)) = \exp (-A [(x - \cos {\theta (t)}) ^ 2 + (y - \sin {\theta (t)}) ^ 2])\)
+In this way it is possible to generate how many samples are needed. AND
+however, it is important to vary the initial conditions so that the network can
+have samples of the system at every point of the dynamics.</p>
+
+<h2 id="propagation-of-time-derivatives">Propagation of time derivatives</h2>
+
+<p>The time derivatives of some appear in the loss function
+quantities: $ \dot {x} $ we assume to be able to calculate it from the data
+input, while $ \dot {z} $ and $ \dot {\tilde {x}} $ we must express them in
+function of known quantities. For example, for $ \dot {z} $:</p>
+
+<ul>
+  <li>
+    <p>$ m $ number of layers in the network,</p>
+  </li>
+  <li>
+    <p>$ x $ = input,</p>
+  </li>
+  <li>
+    <p>$ z $ = network output,</p>
+  </li>
+  <li>
+    <p>$ I_j = (w_ja_ {j-1} + b_j) $ value of the neurons layer $ j $, so
+  $ \boxed {I_0 = (x \omega_0 + b_0)} $ e
+  $ \boxed {z = I_m = (a_ {m-1} \omega_m + b_m)} $</p>
+  </li>
+  <li>
+    <p>$ a_ {j} (I_j) = f (I_j) $ activation of layer l,</p>
+  </li>
+</ul>
+
+\[\frac {dz} {dt} = \frac {dI_m} {dt} =
+\frac {dI_m} {da_ {m-1}} \frac {da_ {m-1}} {dt}\]
+
+\[\frac {dI_m} {dt} =
+\frac {da_ {m-1}} {dt} \left [\frac {d} {da_ {m-1}} (a_ {m-1} \omega_m + b_m) \right]\]
+
+\[\frac {dI_m} {dt} = \frac {df (I_ {m-1})} {dt} \omega_m\]
+
+<p>\(\boxed {
+\frac {dI_m} {dt} = f ^ \prime \frac {d (I_ {m-1})} {dt} \omega_m
+}\) With boundary conditions given by the first layer and by the input:
+\(\boxed {
+\frac {dI_0} {dt} = \frac {dI_0} {dx} \frac {dx} {dt} = \dot {x} \; \omega_0
+}\)</p>
+
+<p>Applying this rule it is possible to calculate:</p>
+
+<ul>
+  <li>
+    <p>$ \dot {z} $ knowing $ \dot {x} $,</p>
+  </li>
+  <li>
+    <p>$ \dot {\tilde {x}} $ knowing $ \dot {z} $ (for the latter using
+  the relation $ \dot {z} = \Theta (z) \Xi $, being $ z $ the magnitude
+  Note).</p>
+  </li>
+</ul>
+
+<h2 id="training-details">Training Details</h2>
+
+<p>I experimented with different combinations by varying the function of
+activation, the size of the latent space, the algorithm of
+optimization and initialization of weights. I report the details that
+led to the best result:</p>
+
+<ul>
+  <li>
+    <p>Activation function $ f $ = ReLU to avoid phenomena of 
+ <strong>Vanishing Gradient</strong></p>
+  </li>
+  <li>
+    <p>Optimizer = Adam</p>
+  </li>
+  <li>
+    <p>Initialization of the net weights: extraction from one
+  uniform distribution.</p>
+  </li>
+  <li>
+    <p>The $ \xi $ coefficients have been initialized to $ 1 $.</p>
+  </li>
+  <li>
+    <p>For the choice of the hyperparameters $ \lambda $ in the loss function ho
+  used the values ​​indicated in the paper, respectively:
+  $ \lambda_1 = 5 \times 10 ^ {- 4}, \; \lambda_2 = 5 \times 10 ^ {- 5} $.
+  While for $ \lambda_3 $ I did some tests.</p>
+  </li>
+  <li>
+    <p>Dimension of the latent space $ d = 10 $.</p>
+  </li>
+  <li>
+    <p>The training lasted 1500 epochs (Early Stopping)</p>
+  </li>
+  <li>
+    <p>Batch size = 1024 samples.</p>
+  </li>
+  <li>
+    <p>I didn’t use a validation set as it didn’t add
+  relevant information.</p>
+  </li>
+</ul>
+
+<figure class="half">
+  <a href="../sindy/Xi_distrib_zero.png">
+  <img src="../sindy/Xi_distrib_zero.png" /></a>
+
+  <a href="../sindy/Xi_distribution_1000.png">
+  <img src="../sindy/Xi_distribution_1000.png" /></a>
+
+  <figcaption> Distribution of SINDy coefficients for different value of $\lambda$ regolarizer </figcaption>
+</figure>
+
+<figure>
+  <a href="../sindy/loss.png">
+  <img src="../sindy/loss.png" /></a>
+
+  <figcaption> Losses over epochs </figcaption>
+</figure>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#autoencoders" class="page__taxonomy-item p-category" rel="tag">Autoencoders</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#project" class="page__taxonomy-item p-category" rel="tag">project</a>
+    
+    </span>
+  </p>
+
+
+        
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Autoencoder+%2B+SINDy+%2B+Pendulum%20http%3A%2F%2Flocalhost%3A4000%2Fprojects%2F3.SINDY%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2F3.SINDY%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fprojects%2F3.SINDY%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/2.EEG_Analysis/" class="pagination--pager" title="EEG Analysis
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/Hello-world/" rel="permalink">Hello World
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">It is done! Welcome to my new website.
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+</div>
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/pietro-sillano" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/pietro-sillano/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 Pietro Sillano. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
