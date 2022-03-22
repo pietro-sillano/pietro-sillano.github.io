@@ -23,7 +23,7 @@ title                    : "SullivanStuff"
 title_separator          : "|"
 subtitle                 : ""
 name                     : "Pietro Sillano"
-description              : "An amazing website."
+description              : "Pietro Sillano Personal Page"
 url                      : "https://pietro-sillano.github.io/"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : pietro-sillano/pietro-sillano.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -129,25 +129,12 @@ author:
 # Site Footer
 footer:
   links:
-    #- label: "Twitter"
-      #icon: "fab fa-fw fa-twitter-square"
-      ## url:
-    #- label: "Facebook"
-      #icon: "fab fa-fw fa-facebook-square"
-      ## url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pietro-sillano"
     - label: "Linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/pietro-sillano/"
-    #- label: "Bitbucket"
-      #icon: "fab fa-fw fa-bitbucket"
-      ## url:
-    #- label: "Instagram"
-      #icon: "fab fa-fw fa-instagram"
-      ## url:
-
 
 # Reading Files
 include:
