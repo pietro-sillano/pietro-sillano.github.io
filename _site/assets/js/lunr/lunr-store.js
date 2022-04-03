@@ -11,14 +11,14 @@ var store = [{
         "url": "/projects/1.EMfield/",
         "teaser": null
       },{
-        "title": "EEG Analysis",
-        "excerpt":"This project has been developed during the 2021 hackathon organized by G-Tec. In these two days, we analyzed a motor imagery Brain Computer Interfaces (BCIs) dataset from chronic stroke patients. In recent years, BCIs have been widely used as rehabilitation tools to help the recovery process.. Thanks to BCIs, we...","categories": ["project"],
+        "title": "Hackathon: EEG Data Analysis",
+        "excerpt":"This project was developed during the 2021 hackathon organized by G-Tec. On these two days, we analyzed EEG data recorded during stroke rehabilitation. In particular, that was a motor imagery Brain-Computer Interfaces (BCIs) rehabilitation. In recent years, BCIs are widely used as rehabilitation tools to help the recovery process from...","categories": ["project"],
         "tags": [],
         "url": "/projects/2.EEG_Analysis/",
         "teaser": null
       },{
         "title": "Autoencoder + SINDy + Pendulum",
-        "excerpt":"Introduction The use of neural networks or deep learning for the prediction of dynamics of dynamical systems presents some criticalities, among which problems of generalization outside the training set examples and also a lack of interpretability of the model obtained, due to the great the number of parameters of such...","categories": ["project"],
+        "excerpt":"One of my friends send me this video, I put it on watch later as usual and it waits too much time there. When I watched it, it right away blew my mind: I download the paper and dove into the topic. The idea is to recover dynamical equations from...","categories": ["project"],
         "tags": ["Autoencoders"],
         "url": "/projects/3.SINDY/",
         "teaser": null

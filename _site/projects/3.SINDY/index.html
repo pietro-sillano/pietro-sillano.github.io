@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Autoencoder + SINDy + Pendulum | SullivanStuff</title>
-<meta name="description" content="Introduction">
+<meta name="description" content="One of my friends send me this video, I put it on watch later as usual and it waits too much time there. When I watched it, it right away blew my mind: I download the paper and dove into the topic.">
 
 
   <meta name="author" content="Pietro Sillano">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="http://localhost:4000/projects/3.SINDY/">
 
 
-  <meta property="og:description" content="Introduction">
+  <meta property="og:description" content="One of my friends send me this video, I put it on watch later as usual and it waits too much time there. When I watched it, it right away blew my mind: I download the paper and dove into the topic.">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2022-03-29T16:29:09+02:00">
+  <meta property="article:published_time" content="2022-04-04T01:37:55+02:00">
 
 
 
@@ -104,7 +104,7 @@
 
   </head>
 
-  <body class="layout--single">
+  <body class="layout--single wide">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -196,6 +196,122 @@
 
 <div id="main" role="main">
   
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+    <div class="author__avatar">
+      <a href="http://localhost:4000/">
+        <img src="/assets/img/propic.jpeg" alt="Pietro Sillano" itemprop="image" class="u-photo">
+      </a>
+    </div>
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Pietro Sillano</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>Physics Student, ML &amp; AI passionate, Member of MLJC</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Turin, Italy</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="https://www.linkedin.com/in/pietro-sillano/" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/pietro-sillano" rel="nofollow noopener noreferrer me"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://www.mljc.it/" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-laptop" aria-hidden="true"></i><span class="label">MLJC Website</span></a></li>
+          
+        
+          
+            <li><a href="mailto:pietrosillano@gmail.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+  
+  </div>
+
 
 
 <!--  SCRIPT PER LATEX   -->
@@ -222,8 +338,8 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Autoencoder + SINDy + Pendulum">
-    <meta itemprop="description" content="Introduction">
-    <meta itemprop="datePublished" content="2022-03-29T16:29:09+02:00">
+    <meta itemprop="description" content="      One of my friends send me this video, I put it on watch later as usual and it waits too much time there. When I watched it, it right away blew my mind: I download the paper and dove into the topic.">
+    
     
 
     <div class="page__inner-wrap">
@@ -247,7 +363,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          12 minute read
+          13 minute read
         
       </span>
     
@@ -259,15 +375,17 @@
 
       <section class="page__content e-content" itemprop="text">
         
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#introduction">Introduction</a></li><li><a href="#task">Task</a></li><li><a href="#methods">Methods</a><ul><li><a href="#dataset">Dataset</a></li><li><a href="#network-architecture">Network architecture</a></li><li><a href="#sindy-sparse-identification-of-nonlinear-dynamical-systems">Sindy: Sparse Identification of Nonlinear Dynamical systems</a></li><li><a href="#loss">Loss</a></li></ul></li><li><a href="#results">Results</a></li><li><a href="#possible-future-developments">Possible future developments</a></li><li><a href="#code">Code</a></li><li><a href="#appendix">Appendix</a><ul><li><a href="#creation-of-the-synthetic-dataset">Creation of the synthetic dataset</a></li><li><a href="#propagation-of-time-derivatives">Propagation of time derivatives</a></li><li><a href="#training-details">Training Details</a></li></ul></li></ul>
-
-            </nav>
-          </aside>
         
-        <h1 id="introduction">Introduction</h1>
+<!-- Courtesy of embedresponsively.com -->
+
+<div class="responsive-video-container">
+    <iframe src="https://www.youtube-nocookie.com/embed/WHhDgxkiR9c" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+  </div>
+
+<!-- https://youtu.be/WHhDgxkiR9c -->
+<p>One of my friends send me this video, I put it on watch later as usual and it waits too much time there. When I watched it, it right away blew my mind: I download the paper and dove into the topic.</p>
+
+<p>The idea is to recover dynamical equations from multi-dimensional data using an autoencoder network. In a nutshell, you have a movie of a dynamic system and you want to obtain its equations of motion.</p>
 
 <p>The use of neural networks or deep learning for the prediction of dynamics
 of dynamical systems presents some criticalities, among which problems of
@@ -283,15 +401,16 @@ simple as possible. The idea of ​​the considered paper is to combine
 an <strong>autoencoder</strong> that carries out a reduction in dimensionality
 of the input and a method called <strong>SINDy</strong> (Sparse Identification of
 Nonlinear Dynamics) that can find a dynamic model for the
-system in the new latent coordinates. 
-In fact, the data that is collected does not always represent the
+system in the new latent coordinates.</p>
+
+<p>The data that is collected does not always represent the
 dynamics of the system in the best or simplest way
 possible representation for which SINDy would fail or identify
 templates with many parameters. 
-While autoencoders perform dimensional reductions but not
-they ensure that the new variables in latent space will have patterns
-simple associated dynamics. It is therefore appropriate to use these
-two methods simultaneously, in order to correctly identify the
+While autoencoders perform dimensional reductions but they don’t ensure that the new variables in latent space will have simple associated dynamics.</p>
+
+<p>It is, therefore, appropriate to use these
+two methods simultaneously, to correctly identify the
 dynamic but at the same time have a simple dynamic model.</p>
 
 <h1 id="methods">Methods</h1>
@@ -309,8 +428,8 @@ freedom in creating the dataset.</p>
   <figcaption> Three samples of the considered dataset, 51 x 51 pixels </figcaption>
 </figure>
 
-<p>We used 100 initial conditions for to generate the dataset
-$ \theta_0 $ and 100 for $ \omega_0 $ by combining them together and excluding the initial conditions for which the dynamics of the pendulum is not a cycle limit. Overall, therefore, we have about 5000 initial conditions different, for each of these we have 100 snapshots and each snapshot is a samples with 2601 (51x51) features.</p>
+<p>We used 100 initial conditions to generate the dataset
+$ \theta_0 $ and 100 for $ \omega_0 $ by combining them and excluding the initial conditions for which the dynamics of the pendulum is not a cycle limit. Overall, therefore, we have about 5000 initial conditions different, for each of these we have 100 snapshots and each snapshot is a sample with 2601 (51x51) features.</p>
 
 <h2 id="network-architecture">Network architecture</h2>
 
@@ -332,14 +451,11 @@ $ \mathbf {z} (t) = \phi (\mathbf {x} (t)) \in \mathbb {R} ^ d $ where d is the 
   </li>
 </ul>
 
-<p>The architecture presented in the paper has been rewritten in PyTorch.
-[@pytorch]</p>
-
 <h2 id="sindy-sparse-identification-of-nonlinear-dynamical-systems">Sindy: Sparse Identification of Nonlinear Dynamical systems</h2>
 
 <p>It is a sparse regression method applied to a library of possibles
 candidate functions to reconstruct the dynamics of dynamic systems
-(also non-linear). [@pysindy] <br />
+(also non-linear).
 To build the dynamic model starting from the input data we use a
 function library and rephrase the problem in the form of
 regression:</p>
@@ -352,7 +468,9 @@ z_1 (t_0) &amp; z_2 (t_0) &amp; z_3 (t_0) &amp; ... &amp; sin (x_1 (t_0)) &amp; 
 z_1 (t_1) &amp; ... &amp; ... \\
  ... &amp; ... \\
 z_1 (t_f)
-\end {pmatrix}\) While the unknown matrix $ \mathbf {\Xi} $ contains i
+\end {pmatrix}\)</p>
+
+<p>While the unknown matrix $ \mathbf {\Xi} $ contains i
 coefficients that determine the active terms of the theta matrix.
 Ideally we would like the sparse matrix so that we have few terms
 selected from $ \mathbf {\Theta} $. The coefficients $ \xi $ are
@@ -363,7 +481,9 @@ net.<br />
 \xi_ {1,1} &amp; \xi_ {1,2} &amp; \xi_ {1,3} \\
 \xi_ {2,1} &amp; ... &amp; ... \\
 \xi_ {3,1}
-\end {pmatrix}\) For example, if I wanted to reconstruct the dynamics of the
+\end {pmatrix}\)</p>
+
+<p>For example, if I wanted to reconstruct the dynamics of the
 one-dimensional system $ \dot {x} = \sin (x) $ I would have:</p>
 
 \[\dot {X} =
@@ -394,7 +514,7 @@ x (t_f)
 
 <h2 id="loss">Loss</h2>
 
-<p>The two methods are combined with each other via the cost function
+<p>The two methods are combined via the cost function
 $ L $; in fact it will not simply be the MSE loss (mean squared loss) between
 the autoencoder input $ x $ and the reconstruction $ \tilde {x} $ but they come
 added terms that guarantee in addition to the reconstruction of the input,
@@ -421,32 +541,34 @@ follows:</p>
   </li>
   <li>
     <p>$ L_ {reg} = \frac {1} {pd} \sum_ {i = 1} ^ {pd} | {\mathbf {\Xi}} | _1 $ is a
-  L1 regularization which promotes the sparsity of the coefficients
+  L1 regularization that promotes the sparsity of the coefficients
   $ \mathbf {\Xi} $ which coincides with identifying dynamic models
   simple.</p>
   </li>
 </ul>
 
 <p>So by combining the four loss terms together with the relative ones
-hyperparameters the overall loss is the following:
-\(L_ {tot} = L_ {recon} + \lambda_1L_ {dx} + \lambda_2L_ {dz} + \lambda_3L_ {reg}\)</p>
+hyperparameters the overall loss is the following:</p>
+
+\[L_ {tot} = L_ {recon} + \lambda_1L_ {dx} + \lambda_2L_ {dz} + \lambda_3L_ {reg}\]
 
 <h1 id="results">Results</h1>
 
-<p>One of the difficulties during model selection is the lack of one
-measure of accuracy of the dynamics identified, therefore I had to
-consider the correctness of the coefficients and the parsimoniousness of the
-dynamic model identified. Not all tested models have
+<p>One of the difficulties during model selection is the lack of a
+a measure of the accuracy of the dynamics identified, therefore I had to
+consider the correctness of the coefficients and the parsimoniousness of the dynamic model identified. Not all tested models have
 identified a plausible dynamic. The best model has
 found: \(\begin {cases}
 \dot {z_3} = 0.381 z_8 \\
 \dot {z_8} = - 0.672 z_3
-\end {cases}\) Where $ z_3 $ and $ z_8 $ are two of the latent variables
+\end {cases}\)</p>
+
+<p>Where $ z_3 $ and $ z_8 $ are two of the latent variables
 extracted from the autoencoder and are the most representative of the
-dynamic. This is due to the fact that the other coefficients were
-null or close to zero and therefore I was able to neglect them. Model
+dynamic. This is because the other coefficients were
+null or close to zero and therefore I was able to neglect them. The model
 identified fails to perfectly recover the initial dynamics
-of the pendulum but correctly captures its dynamics in approximation
+of the pendulum but correctly captures its dynamics in the approximation
 of small angles (linearized model).</p>
 
 <p>! [True and reconstructed attractor] (sindy / attractor.png) {width = “\textwidth”}</p>
@@ -467,30 +589,28 @@ of small angles (linearized model).</p>
   </li>
 </ul>
 
-<h1 id="code">Code</h1>
-
-<p>Implementing the code on
-<a href="https://github.com/pietro-sillano/SindyPendulum">https://github.com/pietro-sillano/SindyPendulum</a>.</p>
-
 <h1 id="appendix">Appendix</h1>
-
+<p>For some of you interested in details:</p>
 <h2 id="creation-of-the-synthetic-dataset">Creation of the synthetic dataset</h2>
 
 <p>Recalling the equation of motion of a simple pendulum:
 \(\ddot {\theta} = - \sin (\theta)\) I can rewrite it as a system
 of two first-order ODEs, namely:</p>
 
-<p>\(\begin {cases}
+\[\begin {cases}
 \dot {\theta} = \omega \\
 \dot {\omega} = - \sin (\theta)
-\end {cases}\) with initial conditions $ \theta_0 $ and $ \omega_0 $ chosen
+\end {cases}\]
+
+<p>with initial conditions $ \theta_0 $ and $ \omega_0 $ chosen
 arbitrarily. I have numerically integrated this system from $ t = 0 $ a
-$ t = $ 5 with an RK4 supplement (Runge-Kutta of the $ 4 ^ or $ order) with a
-timestep $ dt = 0.05 $. Next to generate the pendulum video
-I evaluated a 2D Gaussian function on a 51 x 51 point grid.
-\(G (x, y, \theta (t)) = \exp (-A [(x - \cos {\theta (t)}) ^ 2 + (y - \sin {\theta (t)}) ^ 2])\)
-In this way it is possible to generate how many samples are needed. AND
-however, it is important to vary the initial conditions so that the network can
+$ t = $ 5 with an RK4 supplement (Runge-Kutta of the $ 4^o$ order) with a
+timestep $ dt = 0.05 $. Then to generate the pendulum video
+I evaluated a 2D Gaussian function on a 51 x 51 point grid.</p>
+
+\[G (x, y, \theta (t)) = \exp (-A [(x - \cos {\theta (t)}) ^ 2 + (y - \sin {\theta (t)}) ^ 2])\]
+
+<p>In this way, it is possible to generate how many samples are needed. However, it is important to vary the initial conditions so that the network can
 have samples of the system at every point of the dynamics.</p>
 
 <h2 id="propagation-of-time-derivatives">Propagation of time derivatives</h2>
@@ -528,9 +648,11 @@ function of known quantities. For example, for $ \dot {z} $:</p>
 
 \[\frac {dI_m} {dt} = \frac {df (I_ {m-1})} {dt} \omega_m\]
 
-<p>\(\boxed {
+\[\boxed {
 \frac {dI_m} {dt} = f ^ \prime \frac {d (I_ {m-1})} {dt} \omega_m
-}\) With boundary conditions given by the first layer and by the input:
+}\]
+
+<p>With boundary conditions given by the first layer and by the input:
 \(\boxed {
 \frac {dI_0} {dt} = \frac {dI_0} {dx} \frac {dx} {dt} = \dot {x} \; \omega_0
 }\)</p>
@@ -604,6 +726,13 @@ led to the best result:</p>
   <figcaption> Losses over epochs </figcaption>
 </figure>
 
+<h1 id="code">Code</h1>
+<p>If you’re interested take a look at the code implemented on my <a href="https://github.com/pietro-sillano/SindyPendulum">Github</a>.</p>
+
+<h1 id="references">References</h1>
+<p>I based my work on Sindy-Autoencoders architecture of <a href="https://arxiv.org/abs/1904.02107">paper</a> from Kathleen Champion et al.</p>
+
+
         
       </section>
 
@@ -644,8 +773,6 @@ led to the best result:</p>
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-03-29T16:29:09+02:00">March 29, 2022</time></p>
-
       </footer>
 
       <section class="page__share">
@@ -664,7 +791,7 @@ led to the best result:</p>
       
   <nav class="pagination">
     
-      <a href="/projects/2.EEG_Analysis/" class="pagination--pager" title="EEG Analysis
+      <a href="/projects/2.EEG_Analysis/" class="pagination--pager" title="Hackathon: EEG Data Analysis
 ">Previous</a>
     
     
