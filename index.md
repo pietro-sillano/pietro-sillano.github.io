@@ -15,7 +15,7 @@ header:
 I'm currently a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and **Statistical Physics**.
 
-I'm also a member of a student association: the Machine Learning Journal Club! Check out our works on **_[MLJC](https://www.mljc.it/)_**.
+I'm also a member of a student association: the Machine Learning Journal Club! Check out our works on [MLJC](https://www.mljc.it/).
  
 ---
 
