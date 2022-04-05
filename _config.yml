@@ -103,9 +103,6 @@ analytics:
     anonymize_ip         : # true, false (default)
 
 
-## Google Analytics
-#google_analytics: UA—XXXXXXXX-X
-
 
 # Site Author
 author:
