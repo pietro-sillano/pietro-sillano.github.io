@@ -11,9 +11,10 @@ author_profile: true
 
 
 Hi, I'm Pietro Sillano, a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
-My main interest of research is **BioPhysics** and how we can represent many world phenomena using physics methods and frameworks like Statistical Physics.
-Moreover thanks to some lectures, I got interested in **ML & AI** and I joined the  <a href="https://www.mljc.it/"> <b>Machine Learning Journal Club  </b> </a>, a student organization from Turin which aims to fill the gap between students and researchers in Machine & Deep Learning related fields.
+My main interest of research is **BioPhysics** and how we can represent many natural phenomena using physics methods and frameworks like Statistical Physics and or Statistical Inference.
+Since last year, I got interested in **ML & AI** and I joined the  <a href="https://www.mljc.it/"> <b>Machine Learning Journal Club  </b> </a>, a non-profit research organization from Turin focused on interdisciplinary applications of Machine and Deep Learning.
 
+ 
 <!--
 ### Experiences
 
@@ -24,10 +25,8 @@ We also collaborate with History department working on some Natural Language Pro
 
 
 <h2> Why SullivanStuff? </h2> 
-There was a inside joke between me and my roommates and we choose three pseudonyms and "Sullivan" is from my surname; while "stuff" well..I have many interests and I really like to experiment, learn, "do stuff" and this is my attempt to write about them (Hoping to improve my writing skills as well).
-
-I will talk mainly about my experience as physics student and as AI & ML & tech passionate for the more serious & technical section of this blog; while in the future I want to start writing about books and my passion for cooking.
-
+There was an inside joke between me and my roommates and we choose three pseudonyms: “Sullivan” reminds my surname (that's what they said ). While “stuff” well... I have many interests and I really like to experiment and learn new things, and this is my attempt to write about them (hoping to improve my writing skills as well).
+I will talk mainly about my experience as a physics student and as an ML & tech. While in the future I want to start writing about books that I liked, foods that I tried and who knows!
 See you there!
 
 
