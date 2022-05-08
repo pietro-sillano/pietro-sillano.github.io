@@ -30,4 +30,5 @@ You can check about my different projects on my [projects page](https://pietro-s
 
 ## Contact me
 
-For any inquiries, you can reach me via email: **_[pietrosillano@gmail.com](mailto:pietrosillano@gmail.com)_**
+<!--For any inquiries,--> 
+You can reach me via email: **_[pietrosillano@gmail.com](mailto:pietrosillano@gmail.com)_**
