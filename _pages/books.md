@@ -5,8 +5,24 @@ permalink: /books/
 author_profile: true 
 last_modified_at: 2022-04-27 
 --- 
+
+
+
+<style>
+  figcaption {
+/*    background-color: black;*/
+    color: black;
+    font-style: italic;
+    font-size: bigger ;
+    padding: 2px;
+    text-align: center;
+  }
+</style>
+
+
 <figure class="third ">
-  <a href="../assets/img/books/selfish_gene.jpg "> <img src="../assets/img/books/selfish_gene.jpg"></a>  
+  <a href="../assets/img/books/selfish_gene.jpg "> <img src="../assets/img/books/selfish_gene.jpg">   <figcaption>The selfish gene</figcaption>
+ </a>
   <a href="../assets/img/books/geisha.jpg "> <img src="../assets/img/books/geisha.jpg"></a>  
   <a href="../assets/img/books/thinking_fast.jpg "> <img src="../assets/img/books/thinking_fast.jpg"></a>  
   <a href="../assets/img/books/ontheroad.jpg "> <img src="../assets/img/books/ontheroad.jpg"></a>  

@@ -4,7 +4,7 @@ layout: single
 sitemap: true
 permalink: /
 author_profile: true
-excerpt: 'Looking for an internship in Stat Mech or BioPhysics.'
+excerpt: '~Looking~ Found an internship in Stat Mech and BioPhysics at SISSA.'
 header:
   overlay_image: /assets/img/turin.jpg
   overlay_filter: 0.5
@@ -14,6 +14,7 @@ header:
 <!--# About me-->
 I'm currently a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and **Statistical Physics**.
+In September I will move to SISSA, Trieste for working on my Msc Thesis with A. Rosa. The project will be on numerical simulation of constrained biopolymers.
 
 I'm also a member of a non-profit research organization: the Machine Learning Journal Club! Check out our works on [MLJC](https://www.mljc.it/).
  
