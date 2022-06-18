@@ -4,7 +4,7 @@ layout: single
 sitemap: true
 permalink: /
 author_profile: true
-excerpt: '~~Looking for ~~ Found an internship in Stat Mech and BioPhysics at SISSA.'
+excerpt: '~~Looking for~~ Found an internship in Stat Mech and BioPhysics at SISSA.'
 header:
   overlay_image: /assets/img/turin.jpg
   overlay_filter: 0.5
