@@ -1,5 +1,5 @@
 ---
-title:  Autoencoder + SINDy + Pendulum
+title:  Users interactions in Reddit Place 2022
 #categories:
 #  - project
 #tags:
