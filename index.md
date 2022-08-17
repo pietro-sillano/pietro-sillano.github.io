@@ -17,7 +17,7 @@ My main interest of research is **BioPhysics** and **Statistical Physics**.
 
 In September I start working on my Msc Thesis with **Angelo Rosa** at [SISSA](https://www.sissa.it/sbp/research/research.php) in Trieste. The work will be on numerical simulation (MD and Montecarlo) of constrained biopolymers dynamics.
 
-I'm also a member of a non-profit research organization: the Machine Learning Journal Club! Check out our works on our [Website](https://www.mljc.it/).
+I'm also a member of a non-profit research organization: the Machine Learning Journal Club! We are located mainly in Turin, Italy. Check out our works on our [Website](https://www.mljc.it/).
  
 ---
 

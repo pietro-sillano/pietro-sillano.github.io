@@ -19,8 +19,8 @@ classes: wide
   <a href="../place/hokusai.png">
   <img src="../place/hokusai.png"></a>
 
-  <a href="../place/gnu.png">
-  <img src="../place/gnu.png"></a>
+  <a href="../place/ukraine.png">
+  <img src="../place/ukraine.png"></a>
 
   <a href="../place/physics.png">
   <img src="../place/physics.png"></a>
@@ -31,8 +31,11 @@ classes: wide
   <a href="../place/bluecorner.png">
   <img src="../place/bluecorner.png"></a>
 
-  <a href="../place/ukraine.png">
-  <img src="../place/ukraine.png"></a>
+  <a href="../place/gnu.png">
+  <img src="../place/gnu.png"></a>
+
+  
+  <figcaption> Some of the artworks emerged on the canvas </figcaption>
 
 </figure>
 
