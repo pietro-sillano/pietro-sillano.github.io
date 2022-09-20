@@ -26,7 +26,7 @@ As an Physics student, I love to put forward my technical and analytical skills,
 
 ---
 
-You can check about my different projects on my [projects page](https://pietro-sillano.github.io/projects/)
+You can check my projects on my [projects page](https://pietro-sillano.github.io/projects/)
 
 
 

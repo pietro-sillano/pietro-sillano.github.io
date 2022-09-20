@@ -26,7 +26,7 @@ We also collaborate with History department working on some Natural Language Pro
 
 <h2> Why SullivanStuff? </h2> 
 There was an inside joke between me and my roommates and we choose three pseudonyms: “Sullivan” reminds my surname (that's what they said ). While “stuff” well... I have many interests and I really like to experiment and learn new things, and this is my attempt to write about them (hoping to improve my writing skills as well).
-I will talk mainly about my experience as a physics student and as an ML & tech. While in the future I want to start writing about books that I liked, foods that I tried and who knows!
+I will talk mainly about my experience as a physics student and as an ML & tech passionate. While in the future I want to start writing about books, food science and who knows!
 See you there!
 
 
