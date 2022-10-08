@@ -4,9 +4,9 @@ layout: single
 sitemap: true
 permalink: /
 author_profile: true
-excerpt: '~~Looking for~~ Found an internship in Stat Mech-Biophysics at SISSA.'
+excerpt: 'Working on my Msc Thesis with SBP group at SISSA.'
 header:
-  overlay_image: /assets/img/turin.jpg
+  overlay_image: /assets/img/header_bio.png
   overlay_filter: 0.5
 ---
 
