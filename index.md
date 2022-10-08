@@ -4,10 +4,10 @@ layout: single
 sitemap: true
 permalink: /
 author_profile: true
-excerpt: 'Working on my Msc Thesis with SBP group at SISSA.'
+excerpt: 'Working on my Msc Thesis with SBP group at SISSA'
 header:
   overlay_image: /assets/img/header_bio.png
-  overlay_filter: 0.5
+  overlay_filter: 0.3
 ---
 
 
@@ -15,9 +15,9 @@ header:
 I'm currently a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and **Statistical Physics**.
 
-In September I start working on my Msc Thesis with **Angelo Rosa** at [SISSA](https://www.sissa.it/sbp/research/research.php) in Trieste. The work will be on numerical simulation (MD and Montecarlo) of constrained biopolymers dynamics.
+In September I start working on my Msc Thesis with **Angelo Rosa** at [SISSA](https://www.sissa.it/sbp/research/research.php) in Trieste. The work will be on Models and Simulations of constrained chromatine.
 
-I'm also a member of a non-profit research organization: the Machine Learning Journal Club! We are located mainly in Turin, Italy. Check out our works on our [Website](https://www.mljc.it/).
+I'm also a member of a non-profit research organization: the Machine Learning Journal Club! We are located mainly in Turin, Italy. Check out our works and active projects on our [Website](https://www.mljc.it/).
  
 ---
 
@@ -33,4 +33,4 @@ You can check my projects on my [projects page](https://pietro-sillano.github.io
 ## Contact me
 
 <!--For any inquiries,--> 
-You can reach me via email: **_[pietrosillano@gmail.com](mailto:pietrosillano@gmail.com)_**
+You can reach me via email: **_[pietrosillano at gmail.com](mailto:pietrosillano@gmail.com)_**

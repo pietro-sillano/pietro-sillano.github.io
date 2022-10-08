@@ -5,6 +5,12 @@ var store = [{
         "url": "/Hello-world/",
         "teaser": null
       },{
+        "title": "Publication of MLJC Annual Report 2021",
+        "excerpt":"The Machine Learning Journal Club is pleased to publish the Annual Activity Report 2021 where the most relevant scientific and outreach activity of the past year is presented. This report is a great opportunity to thank the several people and institutions that contributed to our activities with their expertise, resources...","categories": [],
+        "tags": [],
+        "url": "/MLJC_Report/",
+        "teaser": null
+      },{
         "title": "Particles Simulation in EM Fields",
         "excerpt":"In many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible. For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is the...","categories": [],
         "tags": [],
