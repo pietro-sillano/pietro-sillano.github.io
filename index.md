@@ -15,7 +15,7 @@ header:
 I'm currently a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and **Statistical Physics**.
 
-In September I start working on my Msc Thesis with **Angelo Rosa** at [SISSA](https://www.sissa.it/sbp/research/research.php) in Trieste. The work will be on Models and Simulations of constrained chromatine.
+In September I start working on my Msc Thesis with **Angelo Rosa** at [SISSA](https://www.sissa.it/sbp/research/research.php) in Trieste. The work will be on Models and Simulations of constrained chromatin.
 
 I'm also a member of a non-profit research organization: the Machine Learning Journal Club! We are located mainly in Turin, Italy. Check out our works and active projects on our [Website](https://www.mljc.it/).
  
