@@ -21,10 +21,10 @@ I'm also a member of a non-profit research organization: the Machine Learning Jo
  
 ---
 
-*As a problem-solving enthusiast, I have always been interested in meet new technical challenges, where I can learn some new things and feed my curiosity.  
+<!--*As a problem-solving enthusiast, I have always been interested in meet new technical challenges, where I can learn some new things and feed my curiosity.  
 As an Physics student, I love to put forward my technical and analytical skills, tackle original problems and learn every day.*
 
----
+----->
 
 You can check my projects on my [projects page](https://pietro-sillano.github.io/projects/)
 
