@@ -4,7 +4,7 @@ layout: single
 sitemap: true
 permalink: /
 author_profile: true
-excerpt: 'Working on my Msc Thesis with SBP group at SISSA'
+excerpt: 'PhD student at TUDelft'
 header:
   overlay_image: /assets/img/header_bio.png
   overlay_filter: 0.3
@@ -12,12 +12,19 @@ header:
 
 
 <!--# About me-->
-I'm currently a **Physics student**  in my second year in Msc. Physics of Complex Systems at the University of Turin.
+
+Hello! I will be a PhD student at TUDelft, under the supervision of [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/) in the field of research that has always fascinated me - BioPhysics and Computational Physics.
+
+
+Prior to this, I completed my MSc thesis under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home) at SISSA in Trieste. The focus of my thesis was on polymer models and MD simulations of nuclear chromatin, which further solidified my interest in the field.
+
+
+In April 2023 I graduated in Msc. Physics of Complex Systems at the University of Turin.
 My main interest of research is **BioPhysics** and **Statistical Physics**.
 
-From October I am working on my Msc Thesis with **Angelo Rosa** at [SISSA](https://www.sissa.it/sbp/research/research.php) in Trieste. The topic is polymer models and MD simulations of chromatin.
 
-I'm also a member of a non-profit research organization: the Machine Learning Journal Club! We are located mainly in Turin, Italy. Check out our works and active projects on our [Website](https://www.mljc.it/).
+
+I am also an active member of the non-profit research organization - Machine Learning Journal Club, located mainly in Turin, Italy. Our organization works on various projects related to machine learning and publishes research articles on our [website](https://www.mljc.it/).
  
 ---
 
