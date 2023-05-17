@@ -11,9 +11,9 @@ header:
 ---
 
 
-<!--# About me-->
+# About me-->
 
-<!--Hello! I will be a PhD student at TUDelft, under the supervision of [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/) in the field of research that has always fascinated me - BioPhysics and Computational Physics. My project is part of the [BaSyC](https://www.basyc.nl/) consortium. -->
+Hello! I will be a PhD student at TUDelft, under the supervision of [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/) in the field of research that has always fascinated me - BioPhysics and Computational Physics. My project is part of the [BaSyC](https://www.basyc.nl/) consortium. 
 
 
 Prior to this, I completed my MSc thesis under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home) at SISSA in Trieste. The focus of my thesis was on polymer models and MD simulations of nuclear chromatin, which further solidified my interest in the field.
@@ -40,4 +40,4 @@ You can check my projects on my [projects page](https://pietro-sillano.github.io
 ## Contact me
 
 <!--For any inquiries,--> 
-You can reach me via email: **_[pietrosillano at gmail.com](mailto:pietrosillano@gmail.com)_**
+You can reach me via email: **_[pietrosillano@gmail.com](mailto:pietrosillano@gmail.com)_**
