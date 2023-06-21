@@ -6,7 +6,7 @@ author_profile: true
 last_modified_at: 2022-04-27 
 --- 
 
-Here's a collection of some of the books that I enjoyed reading:
+Here I collect some of the last books that I particularly enjoyed reading
 
 
 <style>
