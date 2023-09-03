@@ -24,14 +24,13 @@ We also collaborate with History department working on some Natural Language Pro
 <!--When I have free time I work on some personal project about techIf you're interested check out my blog posts and my github pages!-->
 
 
-<h2> Why SullivanStuff? </h2> 
-There was an inside joke between me and my roommates and we choose three pseudonyms: “Sullivan” reminds my surname (that's what they said ). While “stuff” well... I have many interests and I really like to experiment and learn new things, and this is my attempt to write about them (hoping to improve my writing skills as well).
-I will talk mainly about my experience as a physics student and as an ML & tech passionate. While in the future I want to start writing about books, food science and who knows!
+<!--<h2> Why SullivanStuff? </h2> -->
+<!--There was an inside joke between me and my roommates and we choose three pseudonyms: “Sullivan” reminds my surname (that's what they said ). While “stuff” well... I have many interests and I really like to experiment and learn new things, and this is my attempt to write about them (hoping to improve my writing skills as well).-->
+I will talk mainly about my experience as a physics student/researcher and as an ML & tech passionate. While in the future I want to start writing about books, cooking and who knows.
 See you there!
 
 
 <h2> Resume </h2>
- 
 Take a look at my <a href="../assets/docs/cv.pdf"> <b> resume</b>.
 </a>
 
