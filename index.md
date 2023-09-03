@@ -21,7 +21,7 @@ I am Pietro and I work as a PhD student at TUDelft, under the supervision of [Ti
 In April 2023 I graduated in Msc. Physics of Complex Systems at the University of Turin. I completed my Msc thesis under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home) at SISSA in Trieste. The focus of my thesis was on polymer models and MD simulations of nuclear chromatin. It was fascinating and deepened my interest in this field.
 
 
-## Beyond Physics
+## Beyond physics
 I am also an active member of the non-profit research organization - Machine Learning Journal Club, located mainly in Turin, Italy. Our organization works on various projects related to machine learning and publishes research articles on our [website](https://www.mljc.it/).
  
 ---
