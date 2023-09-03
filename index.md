@@ -15,27 +15,19 @@ header:
 
 Hello! 
 
-I am a PhD student at TUDelft, under the supervision of [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/) in one of the field of research that has always fascinated me - BioPhysics and Computational Physics.
+I am Pietro and I work as a PhD student at TUDelft, under the supervision of [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/). My research interests lie at the interface between biology, soft matter and computational physics. I'm especially interested in how biological and artificial cells can divide themselves. 
+
+## Where I've Been
+In April 2023 I graduated in Msc. Physics of Complex Systems at the University of Turin. I completed my Msc thesis under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home) at SISSA in Trieste. The focus of my thesis was on polymer models and MD simulations of nuclear chromatin. It was fascinating and deepened my interest in this field.
 
 
-Prior to this, I completed my MSc thesis under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home) at SISSA in Trieste. The focus of my thesis was on polymer models and MD simulations of nuclear chromatin, which further solidified my interest in the field.
-
-
-In April 2023 I graduated in Msc. Physics of Complex Systems at the University of Turin.
-My main interest of research is **BioPhysics** and **Statistical Physics**.
-
-
-
+## Beyond Physics
 I am also an active member of the non-profit research organization - Machine Learning Journal Club, located mainly in Turin, Italy. Our organization works on various projects related to machine learning and publishes research articles on our [website](https://www.mljc.it/).
  
 ---
-
-<!--*As a problem-solving enthusiast, I have always been interested in meet new technical challenges, where I can learn some new things and feed my curiosity.  
-As an Physics student, I love to put forward my technical and analytical skills, tackle original problems and learn every day.*
-
------>
-
+<!--
 You can check my projects on my [projects page](https://pietro-sillano.github.io/projects/)
+-->
 
 
 
