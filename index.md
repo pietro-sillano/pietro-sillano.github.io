@@ -1,5 +1,5 @@
 ---
-title: "Hi, it's Sullivan here!"
+title: "Hello there!"
 layout: single
 sitemap: true
 permalink: /
