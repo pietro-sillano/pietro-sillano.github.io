@@ -271,6 +271,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:path/
+  mesomem:
+    output: true
+    permalink: /:collection/:path/
 
 # Defaults
 defaults:
@@ -307,6 +310,30 @@ defaults:
       layout: single
       author_profile: true
       read_time: trues
+      comments: # true
+      share: true
+      related: true
+      toc: true
+      toc_sticky: true
+
+  # _mesomem
+  - scope:
+      path: ""
+      type: mesomem
+    values:
+      layout: single
+      author_profile: false
+      toc: true
+      toc_sticky: true
+
+  # _mesomem
+  - scope:
+      path: ""
+      type: mesomem
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
       comments: # true
       share: true
       related: true

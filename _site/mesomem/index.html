@@ -1,0 +1,500 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>MesoMem | Pietro Sillano</title>
+<meta name="description" content="MesoMem — A mesoscale membrane model based on an additive potential. Pietro Sillano  ·  Siewert Jan Marrink  ·  Timon Idema">
+
+
+  <meta name="author" content="Pietro Sillano">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Pietro Sillano">
+<meta property="og:title" content="MesoMem">
+<meta property="og:url" content="http://localhost:4000/mesomem/">
+
+
+  <meta property="og:description" content="MesoMem — A mesoscale membrane model based on an additive potential. Pietro Sillano  ·  Siewert Jan Marrink  ·  Timon Idema">
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/mesomem/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Pietro Sillano",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Pietro Sillano Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/favicons/favicon-16x16.png">
+<link rel="manifest" href="../assets/favicons/site.webmanifest">
+<link rel="mask-icon" href="../assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="../assets/favicons/favicon.ico">
+<meta name="msapplication-config" content="../assets/favicons/browserconfig.xml">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--splash wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+           
+          <span class="site-subtitle"></span>
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog/">Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/projects/">Projects</a>
+            </li><li class="masthead__menu-item">
+              <a href="/mesomem/">MesoMem</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+<div class="page__hero--overlay"
+  style="background-color: #1a1a2e; background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('');"
+>
+  
+    <div class="wrapper">
+      <h1 id="page-title" class="page__title" itemprop="headline">
+        
+          MesoMem
+
+        
+      </h1>
+      
+        <p class="page__lead"><strong>MesoMem</strong> — A mesoscale membrane model based on an additive potential.<br /> <small>Pietro Sillano  ·  Siewert Jan Marrink  ·  Timon Idema</small>
+</p>
+      
+      
+
+
+      
+      
+        <p>
+        
+          <a href="https://arxiv.org/abs/2602.24123" class="btn btn--light-outline btn--large"><i class='fas fa-file-alt'></i> Read the Preprint</a>
+        
+          <a href="https://gitlab.tudelft.nl/idema-group/MesoMem" class="btn btn--light-outline btn--large"><i class='fab fa-gitlab'></i> GitLab Code</a>
+        
+      
+    </div>
+  
+  
+</div>
+
+
+
+<div id="main" role="main">
+  <article class="splash" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="MesoMem">
+    <meta itemprop="description" content="MesoMem — A mesoscale membrane model based on an additive potential. Pietro Sillano  ·  Siewert Jan Marrink  ·  Timon Idema">
+    
+    
+
+    <section class="page__content" itemprop="text">
+      
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item--center">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Bridging the gap between atomistic detail and continuum mechanics is a central challenge in modeling biological membranes, particularly for mesoscopic phenomena spanning large length and time scales. MesoMem is a solvent-free, one-particle-thick coarse-grained model for lipid bilayers governed by an <strong>additive potential</strong> that treats orientational elasticity through distinct tilt and splay energy terms. The model is implemented as a custom pair-style in the <strong>LAMMPS</strong> molecular dynamics engine and is freely available.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<h2 id="key-features">Key Features</h2>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Additive Potential</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Orientational elasticity is split into independent <strong>tilt</strong> and <strong>splay</strong> energy terms, offering an unbiased potential form and direct physical interpretation of each contribution to membrane mechanics.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Mesoscale Efficiency</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Each particle represents a bilayer patch of ~300 lipids. The model accesses <strong>microsecond timescales</strong> and <strong>micron-scale</strong> membrane areas — far beyond what atomistic or standard coarse-grained models can reach.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">LAMMPS Implementation</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Implemented as a custom pair-style in LAMMPS, with full support for MPI parallelization. The source code, example scripts, and tutorials are <strong>openly available</strong> on GitLab.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<hr />
+
+<h2 id="overview-of-simulated-systems">Overview of Simulated Systems</h2>
+
+<figure style="text-align:center; margin: 2rem 0;">
+  <img src="/assets/img/mesomem/fig3.png" alt="Overview of MesoMem simulated lipid systems" style="max-width:100%;" />
+  <figcaption style="margin-top:0.75rem; font-size:0.9em; color:#555;">
+    <strong>Fig. 3</strong> — Overview of simulated lipid systems.
+    (A) Self-assembled patches from 1500 randomly placed particles.
+    (B) Planar membrane colored by <em>z</em>-height.
+    (C) Vesicle with zero (red) and non-zero spontaneous curvature C₀ = 0.1 σ⁻¹ (blue) beads undergoing phase separation.
+    (D) Spherical vesicle: cross-section (top) and full vesicle (bottom).
+    (E) Membrane tube.
+    (F) Cross-section of a vesicle wrapping a colloidal particle.
+    (G) Planar membrane interacting with soft colloidal metaparticles.
+  </figcaption>
+</figure>
+
+<hr />
+
+<h2 id="physics-covered">Physics Covered</h2>
+
+<div class="feature__wrapper">
+
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Self-Assembly &amp; Vesiculation</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Particles spontaneously assemble into lamellar structures and close into stable vesicles from a disordered state.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Tunable Mechanics</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Bending rigidities in the biologically relevant range of 10–30 k_BT and area compressibility moduli calibratable to experimental values.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+    <div class="feature__item">
+      <div class="archive__item">
+        
+
+        <div class="archive__item-body">
+          
+            <h2 class="archive__item-title">Rich Extensions</h2>
+          
+
+          
+            <div class="archive__item-excerpt">
+              <p>Supports <strong>spontaneous curvature</strong>, <strong>osmotic pressure</strong> via explicit solvent particles, multiple lipid types, and adhesive interactions with colloidal nanoparticles.</p>
+
+            </div>
+          
+
+          
+        </div>
+      </div>
+    </div>
+  
+
+</div>
+
+<hr />
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Clone the repository and follow the build instructions to compile LAMMPS with the MesoMem pair-style:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://gitlab.tudelft.nl/idema-group/MesoMem
+<span class="nb">cd </span>MesoMem
+<span class="c"># See README for LAMMPS build instructions</span>
+</code></pre></div></div>
+
+<p>Full example scripts are available in the <a href="https://gitlab.tudelft.nl/idema-group/MesoMem">GitLab repository</a>.</p>
+
+<hr />
+
+<h2 id="tutorials">Tutorials</h2>
+
+<ul>
+  <li><a href="/mesomem/tutorial-1/">Tutorial 1: Running a planar membrane</a></li>
+  <li><a href="/mesomem/tutorial-2/">Tutorial 2: Simulating a vesicle</a></li>
+</ul>
+
+<hr />
+
+<h2 id="citation">Citation</h2>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@misc</span><span class="p">{</span><span class="nl">sillano2026mesomem</span><span class="p">,</span>
+  <span class="na">title</span>         <span class="p">=</span> <span class="s">{MesoMem: A mesoscale membrane model based on an additive potential}</span><span class="p">,</span>
+  <span class="na">author</span>        <span class="p">=</span> <span class="s">{Pietro Sillano and Siewert Jan Marrink and Timon Idema}</span><span class="p">,</span>
+  <span class="na">year</span>          <span class="p">=</span> <span class="s">{2026}</span><span class="p">,</span>
+  <span class="na">eprint</span>        <span class="p">=</span> <span class="s">{2602.24123}</span><span class="p">,</span>
+  <span class="na">archivePrefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
+  <span class="na">primaryClass</span>  <span class="p">=</span> <span class="s">{cond-mat.soft}</span><span class="p">,</span>
+  <span class="na">url</span>           <span class="p">=</span> <span class="s">{https://arxiv.org/abs/2602.24123}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+    </section>
+  </article>
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/pietro-sillano" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://www.linkedin.com/in/pietro-sillano/" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Pietro Sillano. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>

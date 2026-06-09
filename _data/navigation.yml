@@ -10,5 +10,8 @@ main:
   # - title: "Books"
   #   url: /books/
 
+  - title: "MesoMem"
+    url: /mesomem/
+
   - title: "About"
     url:  /about/
