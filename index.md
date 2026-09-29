@@ -13,6 +13,8 @@ I develop **mesoscale models of lipid membranes**, bridging atomistic simulation
 
 ## News
 
+<!-- TODO: replace the placeholder link with the LAMMPS release / pull request URL -->
+- **Coming soon** — MesoMem will be included in the next [LAMMPS release](#).
 - **Sep 2026** — MesoMem is published in [*Physical Review E*](https://doi.org/10.1103/4dhv-8xd7).
 - **Feb 2026** — MesoMem preprint available on [arXiv](https://arxiv.org/abs/2602.24123).
 - **Apr 2023** — MSc in Physics of Complex Systems, University of Turin.
