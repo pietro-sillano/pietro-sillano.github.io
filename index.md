@@ -5,12 +5,9 @@ sitemap: true
 permalink: /
 author_profile: true
 excerpt: "PhD researcher in computational biophysics at TU Delft and the University of Groningen"
-header:
-  overlay_image: /assets/img/header_bio.jpg
-  overlay_filter: 0.3
 ---
 
-I'm a **PhD researcher** in biophysics at the [Kavli Institute of Nanoscience](https://kavli.tudelft.nl/), **Delft University of Technology**, and the **University of Groningen** (Groningen Biomolecular Sciences and Biotechnology Institute), supervised by [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/).
+I'm a **PhD researcher** in biophysics at the **Delft University of Technology** and the **University of Groningen**, supervised by [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/).
 
 I develop **mesoscale models of lipid membranes**, bridging atomistic simulations and continuum mechanics to reach the length and time scales of cellular processes. My current project is [MesoMem](/mesomem/), a coarse-grained membrane model implemented in LAMMPS.
 
