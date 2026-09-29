@@ -2,3 +2,9 @@
 # Local-only paper sources
 assets/img/mesomem/arXiv-*/
 .DS_Store
+
+# Build output
+_site/
+.jekyll-cache/
+.sass-cache/
+.jekyll-metadata

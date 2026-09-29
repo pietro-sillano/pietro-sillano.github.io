@@ -1,11 +1,18 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
+search: false
 ---
 
 @charset "utf-8";
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+// Center figure captions (was a local edit to the theme's _base.scss)
+figcaption {
+  text-align: center;
+}
+
 // MesoMem page figure
 .mesomem-figure {
   margin: 2rem 0;
