@@ -12,7 +12,7 @@ header:
 
 I'm a **PhD researcher** in biophysics at the [Kavli Institute of Nanoscience](https://kavli.tudelft.nl/), **Delft University of Technology**, and the **University of Groningen** (Groningen Biomolecular Sciences and Biotechnology Institute), supervised by [Timon Idema](https://idemalab.tudelft.nl/idema.html) and [Siewert J. Marrink](https://www.rug.nl/staff/s.j.marrink/).
 
-I develop **mesoscale models of lipid membranes**, bridging atomistic simulations and continuum mechanics to reach the length and time scales of cellular processes. I'm especially interested in how biological and artificial cells deform and divide. My current project is [MesoMem](/mesomem/), a coarse-grained membrane model implemented in LAMMPS.
+I develop **mesoscale models of lipid membranes**, bridging atomistic simulations and continuum mechanics to reach the length and time scales of cellular processes. My current project is [MesoMem](/mesomem/), a coarse-grained membrane model implemented in LAMMPS.
 
 ## News
 
