@@ -5,12 +5,6 @@ var store = [{
         "url": "/MLJC_Report/",
         "teaser": null
       },{
-        "title": "Unveiling My Master's Thesis: Exploring Polymer Models and MD Simulations",
-        "excerpt":"Hello everyone! I’m excited to share what I have done for my Master’s thesis. In my thesis, I delved deep into the world of polymer models and Molecular Dynamics (MD) simulations, trying to shed light on the intriguing behavior of nuclear chromatin. About My Thesis Title: Understanding Nuclear Chromatin Dynamics...","categories": [],
-        "tags": [],
-        "url": "/Thesis/",
-        "teaser": null
-      },{
         "title": "Particles Simulation in EM Fields",
         "excerpt":"In many fields of physics, it is important to study the dynamics of single particles, but there are few cases in which an analytical solution is possible. For example, if I consider a charged particle in motion interacting with the electromagnetic field, the equation that describes its dynamics is the...","categories": [],
         "tags": [],
@@ -27,5 +21,11 @@ var store = [{
         "excerpt":"This project was developed during the 2021 hackathon organized by G-Tec. On these two days, we analyzed EEG data recorded during stroke rehabilitation. In particular, that was a motor imagery Brain-Computer Interfaces (BCIs) rehabilitation. In recent years, BCIs are widely used as rehabilitation tools to help the recovery process from...","categories": [],
         "tags": [],
         "url": "/projects/3.EEG_Analysis/",
+        "teaser": null
+      },{
+        "title": "MSc Thesis: Polymer Models of Nuclear Chromatin",
+        "excerpt":"Hello everyone! I’m excited to share what I have done for my Master’s thesis. In my thesis, I delved deep into the world of polymer models and Molecular Dynamics (MD) simulations, trying to shed light on the intriguing behavior of nuclear chromatin. About My Thesis Title: Understanding Nuclear Chromatin Dynamics...","categories": [],
+        "tags": [],
+        "url": "/projects/4.Thesis/",
         "teaser": null
       }]

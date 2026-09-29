@@ -28,7 +28,7 @@ I develop **mesoscale models of lipid membranes**, bridging atomistic simulation
 
 ## Background
 
-I completed my MSc in Physics of Complex Systems at the University of Turin in 2023. My [thesis](/Thesis/), carried out at SISSA (Trieste) under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home), focused on polymer models and molecular dynamics simulations of nuclear chromatin.
+I completed my MSc in Physics of Complex Systems at the University of Turin in 2023. My [thesis](/projects/4.Thesis/), carried out at SISSA (Trieste) under the supervision of [Angelo Rosa](https://sites.google.com/site/angelosissa/home), focused on polymer models and molecular dynamics simulations of nuclear chromatin.
 
 Download my [CV](/assets/docs/cv.pdf).
 
