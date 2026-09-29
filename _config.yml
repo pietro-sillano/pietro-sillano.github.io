@@ -24,7 +24,7 @@ title_separator          : "|"
 subtitle                 : ""
 name                     : "Pietro Sillano"
 description              : "Pietro Sillano Personal Page"
-url                      : "https://pietro-sillano.github.io/"
+url                      : "https://pietro-sillano.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : pietro-sillano/pietro-sillano.github.io # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
@@ -87,7 +87,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : /assets/img/propic.jpeg # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -108,8 +108,8 @@ analytics:
 author:
   name             : "Pietro Sillano"
   avatar           : "/assets/img/propic.jpeg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Physics PhD, ML & AI passionate, Member of MLJC"
-  location         : "Turin, Italy"
+  bio              : "PhD researcher · soft matter & computational biophysics"
+  location         : "Delft, The Netherlands"
   #email            :  "pietrosillano@gmail.com"
   links:
     - label: "Linkedin"
@@ -119,9 +119,12 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/pietro-sillano"
 
-    - label: "MLJC Website"
-      icon: "fas fa-fw fa-laptop"
-      url: "https://www.mljc.it/"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0009-0006-8102-6596"
+    - label: "Google Scholar"
+      icon: "fas fa-fw fa-graduation-cap"
+      url: "https://scholar.google.com/citations?user=TelvzSsAAAAJ&hl=en"
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:pietrosillano@gmail.com"

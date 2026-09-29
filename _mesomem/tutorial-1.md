@@ -1,4 +1,5 @@
 ---
+published: false  # TODO: remove when the tutorial is written
 title: "Tutorial 1: TODO title"
 excerpt: "TODO short description shown on the landing page card."
 # header:

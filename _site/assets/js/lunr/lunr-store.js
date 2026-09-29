@@ -1,16 +1,4 @@
 var store = [{
-        "title": "Tutorial 1: TODO title",
-        "excerpt":"Introduction   TODO: what will the user learn in this tutorial?   Prerequisites      TODO   TODO   Step 1: TODO   TODO content.   Step 2: TODO   TODO content.  ","categories": [],
-        "tags": [],
-        "url": "/mesomem/tutorial-1/",
-        "teaser": null
-      },{
-        "title": "Tutorial 2: TODO title",
-        "excerpt":"Introduction   TODO: what will the user learn in this tutorial?   Prerequisites      TODO   TODO   Step 1: TODO   TODO content.  ","categories": [],
-        "tags": [],
-        "url": "/mesomem/tutorial-2/",
-        "teaser": null
-      },{
         "title": "Publication of MLJC Annual Report 2021",
         "excerpt":"The Machine Learning Journal Club is pleased to publish the Annual Activity Report 2021 where the most relevant scientific and outreach activity of the past year is presented. This report is a great opportunity to thank the several people and institutions that contributed to our activities with their expertise, resources...","categories": [],
         "tags": [],

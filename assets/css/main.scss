@@ -6,3 +6,17 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+// MesoMem page figure
+.mesomem-figure {
+  margin: 2rem 0;
+  text-align: center;
+
+  img { max-width: 100%; }
+
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.9em;
+    color: $muted-text-color;
+    text-align: left;
+  }
+}

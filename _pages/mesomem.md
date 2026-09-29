@@ -9,14 +9,19 @@ header:
   overlay_color: "#1a1a2e"
   overlay_filter: 0.6
   actions:
-    - label: "<i class='fas fa-file-alt'></i> Read the Preprint"
+    - label: "<i class='fas fa-file-alt'></i> Read the Paper (PRE)"
+      url: "https://doi.org/10.1103/4dhv-8xd7"
+    - label: "<i class='fas fa-scroll'></i> arXiv"
       url: "https://arxiv.org/abs/2602.24123"
     - label: "<i class='fab fa-gitlab'></i> GitLab Code"
-      url: "https://gitlab.tudelft.nl/idema-group/MesoMem"
+      url: "https://gitlab.tudelft.nl/idema-group/mesomem"
+  og_image: /assets/img/mesomem/fig3.png
+  og_image_alt: "Overview of membrane systems simulated with MesoMem"
 
 excerpt: >
   **MesoMem** — A mesoscale membrane model based on an additive potential.<br>
-  <small>Pietro Sillano &nbsp;·&nbsp; Siewert Jan Marrink &nbsp;·&nbsp; Timon Idema</small>
+  <small>Pietro Sillano &nbsp;·&nbsp; Siewert J. Marrink &nbsp;·&nbsp; Timon Idema</small><br>
+  <small><em>Physical Review E</em> <strong>114</strong>, 034412 (2026)</small>
 
 intro:
   - excerpt: >
@@ -50,12 +55,13 @@ feature_row_physics:
       vesicles from a disordered state.
   - title: "Tunable Mechanics"
     excerpt: >
-      Bending rigidities in the biologically relevant range of 10–30 k_BT and
+      Bending rigidities in the biologically relevant range of 10–30 k<sub>B</sub>T and
       area compressibility moduli calibratable to experimental values.
   - title: "Rich Extensions"
     excerpt: >
-      Supports **spontaneous curvature**, **osmotic pressure** via explicit solvent particles,
-      multiple lipid types, and adhesive interactions with colloidal nanoparticles.
+      Supports **spontaneous curvature**, multiple lipid types, and adhesive interactions
+      with colloidal nanoparticles. **Osmotic pressure** can be applied to vesicles by adding
+      explicit solvent particles inside and outside, while the membrane model itself stays solvent-free.
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -68,10 +74,10 @@ feature_row_physics:
 
 ## Overview of Simulated Systems
 
-<figure style="text-align:center; margin: 2rem 0;">
-  <img src="/assets/img/mesomem/fig3.png" alt="Overview of MesoMem simulated lipid systems" style="max-width:100%;">
-  <figcaption style="margin-top:0.75rem; font-size:0.9em; color:#555;">
-    <strong>Fig. 3</strong> — Overview of simulated lipid systems.
+<figure class="mesomem-figure">
+  <img src="/assets/img/mesomem/fig3.png" alt="Overview of MesoMem simulated lipid systems">
+  <figcaption>
+    Overview of simulated lipid systems.
     (A) Self-assembled patches from 1500 randomly placed particles.
     (B) Planar membrane colored by <em>z</em>-height.
     (C) Vesicle with zero (red) and non-zero spontaneous curvature C₀ = 0.1 σ⁻¹ (blue) beads undergoing phase separation.
@@ -84,7 +90,7 @@ feature_row_physics:
 
 ---
 
-## Physics Covered
+## Capabilities
 
 {% include feature_row id="feature_row_physics" %}
 
@@ -92,36 +98,70 @@ feature_row_physics:
 
 ## Getting Started
 
-Clone the repository and follow the build instructions to compile LAMMPS with the MesoMem pair-style:
+MesoMem runs as a custom pair-style in a patched build of [LAMMPS](https://www.lammps.org/).
+
+**1. Clone the repository and download LAMMPS**
 
 ```bash
-git clone https://gitlab.tudelft.nl/idema-group/MesoMem
-cd MesoMem
-# See README for LAMMPS build instructions
+git clone https://gitlab.tudelft.nl/idema-group/mesomem.git
+wget https://download.lammps.org/tars/lammps-stable.tar.gz
+tar -xvf lammps-stable.tar.gz
 ```
 
+**2. Copy the MesoMem sources into LAMMPS and compile**
 
-Full example scripts are available in the [GitLab repository](https://gitlab.tudelft.nl/idema-group/MesoMem).
+```bash
+cp mesomem/cpp_files/*.{cpp,h} path_to_lammps/src/
+cd path_to_lammps && mkdir build && cd build
+cmake -D BUILD_MPI=yes -D PKG_BROWNIAN=yes -D PKG_MOLFILE=yes -D PKG_EXTRA-PAIR=yes \
+      -D PKG_MOLECULE=yes -D PKG_DIPOLE=yes ../cmake
+make -j8
+```
+
+**3. Run a self-assembly simulation**
+
+```bash
+cd mesomem
+mpirun -np 4 lmp -i systems/self_assembly/self_assembly.lmp \
+  -v ktilt 12.0 -v ksplay 1.0 -v N 400 -v rcut 2.5 -v wc 2.0 -v zeta 5.0 -v eps 1.0 -v T 0.2
+```
+
+| Parameter | Description | Typical range |
+| --- | --- | --- |
+| `ktilt` | Tilt modulus | 10–20 |
+| `ksplay` | Splay modulus | 0.5–2 |
+| `rcut` | Interaction cutoff distance | 2.5–3 |
+| `wc` | Orientation cutoff distance | 1.8–`rcut` |
+
+Trajectories can be visualized with [OVITO](https://www.ovito.org/). Input scripts for planar membranes, vesicles, tubes, osmotic pressure and nanoparticle wrapping are in the [`systems/`](https://gitlab.tudelft.nl/idema-group/mesomem/-/tree/main/systems) folder of the repository.
 
 ---
 
 ## Tutorials
 
-- [Tutorial 1: Running a planar membrane](/mesomem/tutorial-1/)
-- [Tutorial 2: Simulating a vesicle](/mesomem/tutorial-2/)
+Step-by-step tutorials on planar membranes and vesicles are coming soon.
 
 ---
 
 ## Citation
 
+If you use MesoMem in your research, please cite:
+
+> P. Sillano, S. J. Marrink, and T. Idema, MesoMem: A mesoscale membrane model based on an additive potential, *Phys. Rev. E* **114**, 034412 (2026). [https://doi.org/10.1103/4dhv-8xd7](https://doi.org/10.1103/4dhv-8xd7)
+
 ```bibtex
-@misc{sillano2026mesomem,
-  title         = {MesoMem: A mesoscale membrane model based on an additive potential},
-  author        = {Pietro Sillano and Siewert Jan Marrink and Timon Idema},
-  year          = {2026},
-  eprint        = {2602.24123},
-  archivePrefix = {arXiv},
-  primaryClass  = {cond-mat.soft},
-  url           = {https://arxiv.org/abs/2602.24123}
+@article{4dhv-8xd7,
+  title = {MesoMem: A mesoscale membrane model based on an additive potential},
+  author = {Sillano, Pietro and Marrink, Siewert J. and Idema, Timon},
+  journal = {Phys. Rev. E},
+  volume = {114},
+  issue = {3},
+  pages = {034412},
+  numpages = {11},
+  year = {2026},
+  month = {Sep},
+  publisher = {American Physical Society},
+  doi = {10.1103/4dhv-8xd7},
+  url = {https://link.aps.org/doi/10.1103/4dhv-8xd7}
 }
 ```
