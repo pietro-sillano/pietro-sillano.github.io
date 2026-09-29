@@ -96,47 +96,6 @@ feature_row_physics:
 
 ---
 
-## Getting Started
-
-MesoMem runs as a custom pair-style in a patched build of [LAMMPS](https://www.lammps.org/).
-
-**1. Clone the repository and download LAMMPS**
-
-```bash
-git clone https://gitlab.tudelft.nl/idema-group/mesomem.git
-wget https://download.lammps.org/tars/lammps-stable.tar.gz
-tar -xvf lammps-stable.tar.gz
-```
-
-**2. Copy the MesoMem sources into LAMMPS and compile**
-
-```bash
-cp mesomem/cpp_files/*.{cpp,h} path_to_lammps/src/
-cd path_to_lammps && mkdir build && cd build
-cmake -D BUILD_MPI=yes -D PKG_BROWNIAN=yes -D PKG_MOLFILE=yes -D PKG_EXTRA-PAIR=yes \
-      -D PKG_MOLECULE=yes -D PKG_DIPOLE=yes ../cmake
-make -j8
-```
-
-**3. Run a self-assembly simulation**
-
-```bash
-cd mesomem
-mpirun -np 4 lmp -i systems/self_assembly/self_assembly.lmp \
-  -v ktilt 12.0 -v ksplay 1.0 -v N 400 -v rcut 2.5 -v wc 2.0 -v zeta 5.0 -v eps 1.0 -v T 0.2
-```
-
-| Parameter | Description | Typical range |
-| --- | --- | --- |
-| `ktilt` | Tilt modulus | 10–20 |
-| `ksplay` | Splay modulus | 0.5–2 |
-| `rcut` | Interaction cutoff distance | 2.5–3 |
-| `wc` | Orientation cutoff distance | 1.8–`rcut` |
-
-Trajectories can be visualized with [OVITO](https://www.ovito.org/). Input scripts for planar membranes, vesicles, tubes, osmotic pressure and nanoparticle wrapping are in the [`systems/`](https://gitlab.tudelft.nl/idema-group/mesomem/-/tree/main/systems) folder of the repository.
-
----
-
 ## Tutorials
 
 Step-by-step tutorials on planar membranes and vesicles are coming soon.

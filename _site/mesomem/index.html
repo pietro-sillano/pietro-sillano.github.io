@@ -385,69 +385,6 @@
 
 <hr />
 
-<h2 id="getting-started">Getting Started</h2>
-
-<p>MesoMem runs as a custom pair-style in a patched build of <a href="https://www.lammps.org/">LAMMPS</a>.</p>
-
-<p><strong>1. Clone the repository and download LAMMPS</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://gitlab.tudelft.nl/idema-group/mesomem.git
-wget https://download.lammps.org/tars/lammps-stable.tar.gz
-<span class="nb">tar</span> <span class="nt">-xvf</span> lammps-stable.tar.gz
-</code></pre></div></div>
-
-<p><strong>2. Copy the MesoMem sources into LAMMPS and compile</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp </span>mesomem/cpp_files/<span class="k">*</span>.<span class="o">{</span>cpp,h<span class="o">}</span> path_to_lammps/src/
-<span class="nb">cd </span>path_to_lammps <span class="o">&amp;&amp;</span> <span class="nb">mkdir </span>build <span class="o">&amp;&amp;</span> <span class="nb">cd </span>build
-cmake <span class="nt">-D</span> <span class="nv">BUILD_MPI</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-D</span> <span class="nv">PKG_BROWNIAN</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-D</span> <span class="nv">PKG_MOLFILE</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-D</span> PKG_EXTRA-PAIR<span class="o">=</span><span class="nb">yes</span> <span class="se">\</span>
-      <span class="nt">-D</span> <span class="nv">PKG_MOLECULE</span><span class="o">=</span><span class="nb">yes</span> <span class="nt">-D</span> <span class="nv">PKG_DIPOLE</span><span class="o">=</span><span class="nb">yes</span> ../cmake
-make <span class="nt">-j8</span>
-</code></pre></div></div>
-
-<p><strong>3. Run a self-assembly simulation</strong></p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>mesomem
-mpirun <span class="nt">-np</span> 4 lmp <span class="nt">-i</span> systems/self_assembly/self_assembly.lmp <span class="se">\</span>
-  <span class="nt">-v</span> ktilt 12.0 <span class="nt">-v</span> ksplay 1.0 <span class="nt">-v</span> N 400 <span class="nt">-v</span> rcut 2.5 <span class="nt">-v</span> <span class="nb">wc </span>2.0 <span class="nt">-v</span> zeta 5.0 <span class="nt">-v</span> eps 1.0 <span class="nt">-v</span> T 0.2
-</code></pre></div></div>
-
-<table>
-  <thead>
-    <tr>
-      <th>Parameter</th>
-      <th>Description</th>
-      <th>Typical range</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">ktilt</code></td>
-      <td>Tilt modulus</td>
-      <td>10–20</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">ksplay</code></td>
-      <td>Splay modulus</td>
-      <td>0.5–2</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">rcut</code></td>
-      <td>Interaction cutoff distance</td>
-      <td>2.5–3</td>
-    </tr>
-    <tr>
-      <td><code class="language-plaintext highlighter-rouge">wc</code></td>
-      <td>Orientation cutoff distance</td>
-      <td>1.8–<code class="language-plaintext highlighter-rouge">rcut</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Trajectories can be visualized with <a href="https://www.ovito.org/">OVITO</a>. Input scripts for planar membranes, vesicles, tubes, osmotic pressure and nanoparticle wrapping are in the <a href="https://gitlab.tudelft.nl/idema-group/mesomem/-/tree/main/systems"><code class="language-plaintext highlighter-rouge">systems/</code></a> folder of the repository.</p>
-
-<hr />
-
 <h2 id="tutorials">Tutorials</h2>
 
 <p>Step-by-step tutorials on planar membranes and vesicles are coming soon.</p>
